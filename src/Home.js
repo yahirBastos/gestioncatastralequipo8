@@ -3,7 +3,7 @@ import { Link} from "react-router-dom";
 function Home() {
   return (
     <><nav className="navbar navbar-expand-lg navbar-dark bg-smorange">
-      {/* <!-- Responsive navbar--> */}
+      {/* <!-- Responsive navbar Home--> */}
       <div className="container px-5">
         <div className="navbar-brand"><img className="gobernacionmag" src="assets/Logogcm.png" alt="Logo_GC_Magdalena" /></div>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
