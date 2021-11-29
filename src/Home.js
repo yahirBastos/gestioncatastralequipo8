@@ -16,7 +16,7 @@ function Home() {
           </ul>
         </div>
       </div>
-    {/* <!-- Page Content--> */}
+    {/* <!-- Page Content Home--> */}
     </nav><div className="container px-4 px-lg-5">
         {/* <!-- Heading Row--> */}
         <div className="row gx-4 gx-lg-5 align-items-center my-5">
