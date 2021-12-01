@@ -3,29 +3,19 @@ import Frases from "./Componentes/Frases/";
 import Tarjeta from "./Componentes/Tarjeta/";
 import Imagen from "./Componentes/Imagen/";
 import Tarjeta2 from "./Componentes/Tarjeta2";
+import Barrahome from "./Componentes/Barrahome";
 
 function Home() {
   return (
     <><nav className="navbar navbar-expand-lg navbar-dark bg-smorange">
       {/* <!-- Responsive navbar Home 1git--> */}
-      <div className="container px-5">
-        <div className="navbar-brand"><img className="gobernacionmag" src="assets/Logogcm.png" alt="Logo_GC_Magdalena" /></div>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item"><Link to="/" class="nav-link active" aria-current="page">Inicio</Link></li>
-            <li className="nav-item"><a className="nav-link" href="#!">Politica de Privacidad</a></li>
-            <li className="nav-item"><Link to="/Register" className="nav-link">Registrar</Link></li>
-            <li className="nav-item"><Link to="/Login" className="nav-link">Iniciar Sesion</Link></li>
-          </ul>
-        </div>
-      </div>
+      <Barrahome imagen = {"assets/Logogcm.png"} alt = {"Logo_GC_Magdalena"} linkinicio = {"/"} linkpolitica = {"#"} linkregistrar = {"/Register"} linklog = {"/Login"}/>
       {/* <!-- Page Content--> */}
     </nav><div className="container px-4 px-lg-5">
         {/* <!-- Heading Row--> */}
         <div className="row gx-4 gx-lg-5 align-items-center my-5">
           <Imagen imagen = {"assets/santamarta.jpg"}/>
-          <Tarjeta2 titulo = {"Gestión Catastral - Santa Marta"} texto = {"La <b>Gestión Catastral</b> es un servicio público que comprende el conjunto de operaciones técnicas y administrativas necesarias para el desarrollo adecuado de los procesos de formación, actualización, conservación y difusión de la información catastral, por medio de los cuales se logra la identificación y mantenimiento permanente de la información física, jurídica y económica de los bienes inmuebles de Santa Marta."} link = {"/Register"}/>
+          <Tarjeta2 titulo = {"Gestión Catastral - Santa Marta"} texto = {"La Gestión Catastral es un servicio público que comprende el conjunto de operaciones técnicas y administrativas necesarias para el desarrollo adecuado de los procesos de formación, actualización, conservación y difusión de la información catastral, por medio de los cuales se logra la identificación y mantenimiento permanente de la información física, jurídica y económica de los bienes inmuebles de Santa Marta."} link = {"/Register"}/>
         </div>
         {/* <!-- Call to Action--> */}
         <Frases frase = {"Ya puedes liquidar y pagar tu impuesto predial unificado 2021. ¡Con tu aporte Santa Marta seguirá siendo imparable!"}/>

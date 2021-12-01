@@ -11,7 +11,7 @@ class Barrahome extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><Link to={this.props.linkinicio} class="nav-link active" aria-current="page">Inicio</Link></li>
-                        <li className="nav-item"><a className="nav-link" href={this.props.linkpolitica}>Politica de Privacidad</a></li>
+                        <li className="nav-item"><Link to={this.props.linkpolitica} className="nav-link">Politica de Privacidad</Link></li>
                         <li className="nav-item"><Link to={this.props.linkregistrar} className="nav-link">Registrar</Link></li>
                         <li className="nav-item"><Link to={this.props.linklog} className="nav-link">Iniciar Sesion</Link></li>
                     </ul>
