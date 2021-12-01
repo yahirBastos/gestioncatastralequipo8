@@ -1,4 +1,7 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Frases from "./Componentes/Frases/";
+import Tarjeta from "./Componentes/Tarjeta/";
+import Imagen from "./Componentes/Imagen/";
 
 function Home() {
   return (
@@ -16,11 +19,11 @@ function Home() {
           </ul>
         </div>
       </div>
-    {/* <!-- Page Content--> */}
+      {/* <!-- Page Content--> */}
     </nav><div className="container px-4 px-lg-5">
         {/* <!-- Heading Row--> */}
         <div className="row gx-4 gx-lg-5 align-items-center my-5">
-          <div className="col-lg-7"><img className="img-fluid rounded mb-4 mb-lg-0" src="assets/santamarta.jpg" alt="..." /></div>
+          <Imagen imagen = {"assets/santamarta.jpg"}/>
           <div className="col-lg-5">
             <h1 className="font-weight-light">Gestión Catastral - Santa Marta</h1>
             <p>La <b>Gestión Catastral</b> es un servicio público que comprende el conjunto de operaciones técnicas y administrativas necesarias para el desarrollo adecuado de los procesos de formación, actualización, conservación y difusión de la información catastral, por medio de los cuales se logra la identificación y mantenimiento permanente de la información física, jurídica y económica de los bienes inmuebles de Santa Marta.</p>
@@ -28,45 +31,20 @@ function Home() {
           </div>
         </div>
         {/* <!-- Call to Action--> */}
-        <div className="card text-white bg-secondaryh my-5 py-4 text-center">
-          <div className="card-body2"><p className="text-white m-0">Ya puedes liquidar y pagar tu impuesto predial unificado 2021. ¡Con tu aporte Santa Marta seguirá siendo imparable!</p></div>
-        </div>
+        <Frases frase = {"Ya puedes liquidar y pagar tu impuesto predial unificado 2021. ¡Con tu aporte Santa Marta seguirá siendo imparable!"}/>
         {/* <!-- Content Row--> */}
         <div className="row gx-4 gx-lg-5">
           <div className="col-md-4 mb-5">
-            <div className="card h-100">
-              <div className="card-bodyh">
-                <h2 className="card-title">Consulta tu Estado de Cuenta</h2>
-                <div className="text-img">
-                  <img className="cont1" src="assets/cont1 (1).png" alt="cont1" /><p className="card-text">Ingresa aquí para consultar el estado de cuenta de tu predio, liquidar tu impuesto predial actual y vigencias anteriores y pagar en línea.</p>
-                </div>
-              </div>
-              <div className="card-footer"><Link to="/Login" className="btn btn-primary btn-sm">Más Información </Link></div>
-            </div>
+            <Tarjeta titulo={"Consulta tu Estado de Cuenta"} texto={"Ingresa aquí para consultar el estado de cuenta de tu predio, liquidar tu impuesto predial actual y vigencias anteriores y pagar en línea"} imagen={"assets/cont1 (1).png"} link={"/Login"} />
           </div>
           <div className="col-md-4 mb-5">
-            <div className="card h-100">
-              <div className="card-bodyh">
-                <h2 className="card-title">Calendario de Pagos</h2>
-                <div className="text-img">
-                  <img className="cont1" src="assets/cont1.png" alt="cont1" /><p className="card-text">Consulte el calendario con las fechas límite de pago para el impuesto predial de su inmueble, y demás obligaciones; y acójase además a un beneficio de descuento adicional sobre el valor total del impuesto por pronto pago.</p>
-                </div>
-              </div>
-              <div className="card-footer"><Link to="/Login" className="btn btn-primary btn-sm">Más Información </Link></div>
-            </div>
+            <Tarjeta titulo={"Calendario de Pagos"} texto={"Consulte el calendario con las fechas límite de pago para el impuesto predial de su inmueble, y demás obligaciones; y acójase además a un beneficio de descuento adicional sobre el valor total del impuesto por pronto pago."} imagen={"assets/cont1.png"} link={"/Login"} />
           </div>
           <div className="col-md-4 mb-5">
-            <div className="card h-100">
-              <div className="card-bodyh">
-                <h2 className="card-title">Solicitar Convenio de Pagos</h2>
-                <div className="text-img">
-                  <img className="cont1" src="assets\cont1 (2).png"/><p className="card-text">Haz click aquí para liquidar y/o pagar el recibo de tu impuesto predial por abonos, puedes pagar tu recibo en cuotas mensuales sin intereses; o incluso puedes suscribir un convenio de pago acogiéndote a la normativa vigente. Solicita más información de financiación y facilidades de pago.</p></div>
-              </div>
-              <div className="card-footer"><Link to="/Login" className="btn btn-primary btn-sm">Más Información </Link></div>
-            </div>
+            <Tarjeta titulo={"Solicitar Convenio de Pagos"} texto={"Haz click aquí para liquidar y/o pagar el recibo de tu impuesto predial por abonos, puedes pagar tu recibo en cuotas mensuales sin intereses; o incluso puedes suscribir un convenio de pago acogiéndote a la normativa vigente. Solicita más información de financiación y facilidades de pago."} imagen={"assets/cont1 (2).png"} link={"/Login"} />
           </div>
-        </div>
-      </div></>
+      </div>
+    </div></>
   );
 }
 
