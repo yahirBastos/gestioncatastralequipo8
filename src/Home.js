@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Frases from "./Componentes/Frases/";
 import Tarjeta from "./Componentes/Tarjeta/";
 import Imagen from "./Componentes/Imagen/";
+import Tarjeta2 from "./Componentes/Tarjeta2";
 
 function Home() {
   return (
@@ -24,11 +25,7 @@ function Home() {
         {/* <!-- Heading Row--> */}
         <div className="row gx-4 gx-lg-5 align-items-center my-5">
           <Imagen imagen = {"assets/santamarta.jpg"}/>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Gestión Catastral - Santa Marta</h1>
-            <p>La <b>Gestión Catastral</b> es un servicio público que comprende el conjunto de operaciones técnicas y administrativas necesarias para el desarrollo adecuado de los procesos de formación, actualización, conservación y difusión de la información catastral, por medio de los cuales se logra la identificación y mantenimiento permanente de la información física, jurídica y económica de los bienes inmuebles de Santa Marta.</p>
-            <Link to="/Register" className="btn btn-primary btn-sm">¡Registrar Aquí!</Link>
-          </div>
+          <Tarjeta2 titulo = {"Gestión Catastral - Santa Marta"} texto = {"La <b>Gestión Catastral</b> es un servicio público que comprende el conjunto de operaciones técnicas y administrativas necesarias para el desarrollo adecuado de los procesos de formación, actualización, conservación y difusión de la información catastral, por medio de los cuales se logra la identificación y mantenimiento permanente de la información física, jurídica y económica de los bienes inmuebles de Santa Marta."} link = {"/Register"}/>
         </div>
         {/* <!-- Call to Action--> */}
         <Frases frase = {"Ya puedes liquidar y pagar tu impuesto predial unificado 2021. ¡Con tu aporte Santa Marta seguirá siendo imparable!"}/>
