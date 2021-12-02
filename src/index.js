@@ -6,7 +6,6 @@ import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
 import Crearpredio from './Crearpredios';
-import Dashboard from './Dashboard'
 import Olvido from './Olvido';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
