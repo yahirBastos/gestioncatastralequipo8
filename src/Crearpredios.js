@@ -1,6 +1,5 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import { Link } from "react-router-dom";
 import Formcrearpredio from "./Componentes/Formcrearpredio/Formcrearpredio";
 
 function Crearpredio() {
