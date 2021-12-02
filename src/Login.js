@@ -17,7 +17,7 @@ function Login() {
                                 {/* <!-- Nested Row within Card Body --> */}
                                 <div className="row">
                                     <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                                    <Formlogin titulo = {"BIENVENIDO A LA PLATAFORMA DE GESTION CATASTRAL"} usuario = {"Usuario"} contrasena = {"Contraseña"} linkinicio = {"#"} linkolvido = {"#"} linkregistro = {"/Register"} politica = {"#"} terminos = {"#"}/>
+                                    <Formlogin titulo = {"BIENVENIDO A LA PLATAFORMA DE GESTION CATASTRAL"} usuario = {"usuario"} contrasena = {"contrasena"} linkinicio = {"#"} linkolvido = {"#"} linkregistro = {"/Register"} politica = {"#"} terminos = {"#"}/>
                                 </div>
                             </div>
                         </div>

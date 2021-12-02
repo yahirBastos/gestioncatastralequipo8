@@ -14,15 +14,15 @@ class Formlogin extends React.Component {
                         <div className="form-group">
                             <input type="text" className="form-control form-control-user"
                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                placeholder={this.props.usuario} />
+                                placeholder= "Usuario" name = {this.props.usuario} />
                         </div>
                         <div className="form-group">
                             <input type="password" className="form-control form-control-user"
-                                id="exampleInputPassword" placeholder={this.props.contrasena} />
+                                id="exampleInputPassword" placeholder= "Contraseña" name = {this.props.contrasena} />
                         </div>
                         <div className="form-group">
                             <div className="custom-control custom-checkbox small">
-                                <input type="checkbox" className="custom-control-input" id="customCheck" />
+                                <input type="checkbox" className="custom-control-input" id="customCheck" name = {this.props.checkbox}/>
                                 <label class="custom-control-label" for="customCheck">Recordar
                                     Datos</label >
                             </div>
