@@ -1,6 +1,8 @@
 
-import Formregistro from "./Componentes/Formregistro";
-function Register() {
+
+import Formolvido from "./Componentes/Formolvido";
+
+function Olvido() {
     return (
         <div className="bg-gradient-primary">
 
@@ -15,8 +17,7 @@ function Register() {
                             <div className="card-body p-0">
                                 {/* <!-- Nested Row within Card Body --> */}
                                 <div className="row">
-                                    <div className="col-lg-6 d-none d-lg-block bg-register-image"></div>
-                                    <Formregistro titulo ={"CREAR UNA NUEVA CUENTA"} nombres ={"nombres"} apellidos ={"apellidos"}  correo ={"correo"} telefono ={"telefono"} sexo ={"sexo"} password ={"password"} passrepet ={"passrepet"} linkregistro ={"/Register"} linkolvido ={"#"} linklogin ={"/Login"}/>
+                                    <Formolvido email = {"email"} linkolvido = {"#"} linkregister = {"/register"} linklogin = {"/login"} politica ={"#"} terminos = {"#"} />
                                 </div>
                             </div>
                         </div>
@@ -27,9 +28,9 @@ function Register() {
 
             </div>
         </div>
+    
 
     );
 }
 
-
-export default Register;
+export default Olvido;
