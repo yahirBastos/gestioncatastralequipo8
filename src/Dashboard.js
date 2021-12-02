@@ -1,6 +1,7 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import { Link } from "react-router-dom";
+import Frases from "./Componentes/Frases";
 
 function Dashboard() {
     return (
@@ -117,6 +118,8 @@ function Dashboard() {
                         </div>
 
                         {/* <!-- Content Row --> */}
+
+                        <Frases />
 
                         <div className="row">
 
