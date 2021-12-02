@@ -119,7 +119,7 @@ function Dashboard() {
 
                         {/* <!-- Content Row --> */}
 
-                        <Frases />
+                        <Frases frase={"Bienvenidos al portal de trámites en línea de la Gobernación del Magdalena. Aquí podrá, realizar el pago de sus impuestos, Realizar Convenios de pagos, Verificar Fechas de pagos, entre otros servicios virtuales."}/>
 
                         <div className="row">
 
