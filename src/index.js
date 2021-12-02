@@ -4,7 +4,8 @@ import './index.css';
 import Home from './Home';
 import Login from './Login';
 import Register from './Register';
-import Dashboard from './Dashboard'
+import Dashboard from './Dashboard';
+import Crearpredio from './Crearpredios';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -16,6 +17,7 @@ ReactDOM.render(
        <Route path="/login" element={<Login/>}/>
        <Route path="/register" element={<Register/>}/>
        <Route path="/dashboard" element={<Dashboard/>}/>
+       <Route path="/crearpredio" element={<Crearpredio/>}/>
      </Routes>
    </Router>
   </React.StrictMode>
