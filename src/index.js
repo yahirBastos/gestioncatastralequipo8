@@ -14,6 +14,7 @@ import Asociarpredios from './Asociarpredios';
 import Edicionpredios from './Edicionpredios';
 import Edicionusuario from './Edicionusuarios';
 import Gestionaru from './Gestionaru';
+import Pagosenlinea from './Pagosenlinea';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -35,6 +36,7 @@ ReactDOM.render(
        <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
        <Route path="/edicionusuarios" element={<Edicionusuario/>}/>
        <Route path="/gestionaru" element={<Gestionaru/>}/>
+       <Route path="/pagosenlinea" element={<Pagosenlinea/>}/>
 
      </Routes>
    </Router>
