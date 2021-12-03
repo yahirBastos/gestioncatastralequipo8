@@ -9,7 +9,7 @@ class Formcrearpredio extends React.Component{
             <div className="container-fluid">
                 {/* <!-- Page Heading --> */}
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 className="h3 mb-0 text-gray-800">Formulario Creación de Predios</h1>
+                    <h1 className="h3 mb-0 text-gray-800">{this.props.titulo}</h1>
                 </div>
 
                 <div class="form-group row">
@@ -65,7 +65,7 @@ class Formcrearpredio extends React.Component{
                             id="exampleareatotal" placeholder="Estrato" name = {this.props.estrato}/>
                         <br />
                     </div>
-                    <Link to={this.props.linkregistropredio} className="btn btn-primary btn-user btn-block">Registrar Predio</Link>
+                    <Link to={this.props.linkregistropredio} className="btn btn-primary btn-user btn-block">{this.props.nombreboton}</Link>
                 </div>
             </div>
         );

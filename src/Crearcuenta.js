@@ -38,8 +38,8 @@ function Crearcuenta() {
                     {/* <!-- End of Topbar --> */}
 
                     {/* <!-- Begin Form Page --> */}
-                    <Formcrearcuenta codigodeusuario={"codigodeusuario"} Niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"} 
-                    Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"}/>
+                    <Formcrearcuenta titulo ={"Crear Nueva Cuenta"}codigodeusuario={"codigodeusuario"} Niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"} 
+                    Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Registrar Cuenta"}/>
         
                 </div>
             </div>

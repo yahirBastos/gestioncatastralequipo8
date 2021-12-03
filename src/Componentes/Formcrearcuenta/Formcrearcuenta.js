@@ -7,7 +7,7 @@ class Formcrearcuenta extends React.Component{
             <div className="container-fluid">
             {/* <!-- Page Heading --> */}
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 className="h3 mb-0 text-gray-800">Crear Nueva Cuenta </h1>
+                <h1 className="h3 mb-0 text-gray-800">{this.props.titulo} </h1>
             </div>
 
             <div class="form-group row">
@@ -82,7 +82,7 @@ class Formcrearcuenta extends React.Component{
                         id="examplereppass" placeholder="Repetir Contraseña" name = {this.props.repcontraseña}/>
                     <br/>
                 </div>  
-                <Link to={this.props.linkregistropredio} className="btn btn-primary btn-user btn-block">Registrar Cuenta</Link>
+                <Link to={this.props.linkregistropredio} className="btn btn-primary btn-user btn-block">{this.props.nombreboton}</Link>
             </div>
         </div>
         )
