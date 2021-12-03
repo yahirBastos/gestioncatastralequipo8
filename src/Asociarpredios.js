@@ -1,8 +1,8 @@
 import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
-import Contenidoboard from "./Componentes/Contenidoboard/Contenidoboard";
+import Formasociarpredio from "./Componentes/Formasociarpredio/Formasociarpredio,";
 
-function Dashboardexterno(){
+function Asociarpredios(){
     return(
         <><div id="wrapper">
             {/* <!-- Sidebar --> */}
@@ -10,7 +10,7 @@ function Dashboardexterno(){
                 href0={"/Externo"} primephoto={"assets/Logogcm.png"}
                 href1={"/Externo"} icon1={"fas fa-house-user"} card1={"Dashboard"}
                 titulo={"Gestiones"}
-                href2={"/Asociarpredio"} icon2={"fas fa-tasks"} card2={"Asociar Predio"}
+                href2={"#"} icon2={"fas fa-tasks"} card2={"Asociar Predio"}
                 card2_1={"Asociar Predio"} href1card2={"/Asociarpredio"} name1card2={"Asociar Predio"}
                 href3={"#"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios de Pagos"}
                 card3_1={"Convenios de Pagos"} href1card3={"#"} name1card3={"Convenios de Pagos"}
@@ -40,18 +40,15 @@ function Dashboardexterno(){
 
                         {/* <!-- Page Heading --> */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
+                            <h1 className="h3 mb-0 text-gray-800">Asociar Predio</h1>
                         </div>
 
-                        <Contenidoboard link1={"/Asociarpredio"} titulo1={"Asociar Predio"} icon={"fas fa-tasks fa-2x text-gray-300"} 
-                        link2={"#"} titulo2={"Pagos en Linea"} icon2={"far fa-money-bill-alt fa-2x text-gray-300"} 
-                        link3={"#"} titulo3={"Fechas de Pagos y Descuentos"} icon3={"fas fa-calendar-check fa-2x text-gray-300"} 
-                        link4={"#"} titulo4={"Fechas de Pagos y Descuentos"} icon4={"fas fa-percentage fa-2x text-gray-300"}
-                        frase={"Bienvenidos al portal de trámites en línea de la Gobernación del Magdalena. Aquí podrá, realizar el pago de sus impuestos, Realizar Convenios de pagos, Verificar Fechas de pagos, entre otros servicios virtuales."} />
+                        <Formasociarpredio codigodeusuario={"codigodeusuario"} linkconsulta={"#"} Direccion={"Direccion"} Nombretitular={"Nombretitular"} 
+                        Estrato={"Estrato"} linkasosciar={"#"}/>
                     </div>
                 </div>
             </div>
         </div></>
     );
 }
-export default Dashboardexterno
+export default Asociarpredios;

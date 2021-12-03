@@ -1,9 +1,8 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
+import Formcrearcuenta from "./Componentes/Formcrearcuenta/Formcrearcuenta";
 
-import Formcrearpredio from "./Componentes/Formcrearpredio/Formcrearpredio";
-
-function Crearpredio() {
+function Edicionusuario() {
     return (
         <div id="wrapper">
 
@@ -41,15 +40,12 @@ function Crearpredio() {
                     {/* <!-- End of Topbar --> */}
 
                     {/* <!-- Begin Form Page --> */}
-                    <Formcrearpredio titulo={"Formulario Creación de Predios"}codigopredio={"codigopredio"} nombre={"nombre"} tipodocumento={"tipodocumento"} 
-                    numerodocumento={"numerodocumento"} areatotal={"areatotal"} areaconstruida={"areaconstruida"} direccion={"direccion"} 
-                    barrio={"barrio"} estrato={"estrato"} linkregistropredio={"#"} nombreboton={"Registrar Predio"}
-                    />
+                    <Formcrearcuenta titulo ={"Editar Usuarios"}codigodeusuario={"codigodeusuario"} Niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"} 
+                    Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"}/>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Crearpredio
-
+export default Edicionusuario;
