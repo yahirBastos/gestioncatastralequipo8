@@ -17,6 +17,8 @@ import Gestionaru from './Gestionaru';
 import Eliminaruser from './Eliminaruser';
 import Editarpredios from './Editarpredios';
 import Eliminarpredios from './Eliminarpredios';
+import Pagosenlinea from './Pagosenlinea';
+import Dashboardinterno from './Dashboaardinterno';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -41,6 +43,8 @@ ReactDOM.render(
        <Route path="/eliminaruser" element={<Eliminaruser/>}/>
        <Route path="/editarpredios" element={<Editarpredios/>}/>
        <Route path="/eliminarpredios" element={<Eliminarpredios/>}/>
+       <Route path="/pagosenlinea" element={<Pagosenlinea/>}/>
+       <Route path="/interno" element={<Dashboardinterno/>}/>
      </Routes>
    </Router>
   </React.StrictMode>
