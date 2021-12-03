@@ -14,6 +14,9 @@ import Asociarpredios from './Asociarpredios';
 import Edicionpredios from './Edicionpredios';
 import Edicionusuario from './Edicionusuarios';
 import Gestionaru from './Gestionaru';
+import Eliminaruser from './Eliminaruser';
+import Editarpredios from './Editarpredios';
+import Eliminarpredios from './Eliminarpredios';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -35,7 +38,9 @@ ReactDOM.render(
        <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
        <Route path="/edicionusuarios" element={<Edicionusuario/>}/>
        <Route path="/gestionaru" element={<Gestionaru/>}/>
-
+       <Route path="/eliminaruser" element={<Eliminaruser/>}/>
+       <Route path="/editarpredios" element={<Editarpredios/>}/>
+       <Route path="/eliminarpredios" element={<Eliminarpredios/>}/>
      </Routes>
    </Router>
   </React.StrictMode>

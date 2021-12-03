@@ -4,7 +4,7 @@ import Data from './jsons/users.js';
 import React from "react";
 import Boton from "./Componentes/Boton";
 
-function Gestionaru() {
+function Eliminaruser() {
     return (
         <><div id="wrapper">
 
@@ -96,7 +96,7 @@ function Gestionaru() {
                                                         <td>{users1.documento}</td>
                                                         <td>{users1.email}</td>
                                                         <td>{users1.contrasena}</td>
-                                                        <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td>
+                                                        <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Eliminar"}/>}</td>
                                                     </tr>
                                                 );
                                             })}
@@ -117,4 +117,4 @@ function Gestionaru() {
     );
 }
 
-export default Gestionaru;
+export default Eliminaruser;
