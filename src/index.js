@@ -7,6 +7,8 @@ import Register from './Register';
 import Dashboard from './Dashboard';
 import Crearpredio from './Crearpredios';
 import Olvido from './Olvido';
+import Crearcuenta from './Crearcuenta';
+import Dashboardexterno from './Dashboardexterno';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -20,6 +22,8 @@ ReactDOM.render(
        <Route path="/dashboard" element={<Dashboard/>}/>
        <Route path="/crearpredio" element={<Crearpredio/>}/>
        <Route path="/olvido" element={<Olvido/>}/>
+       <Route path="/crearcuenta" element={<Crearcuenta/>}/>
+       <Route path="/externo" element={<Dashboardexterno/>}/>
      </Routes>
    </Router>
   </React.StrictMode>
