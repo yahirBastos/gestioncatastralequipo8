@@ -12,7 +12,7 @@ function Crearcuenta() {
                 href1={"/Dashboard"} icon1={"fas fa-house-user"} card1={"Dashboard"}
                 titulo={"Gestiones"}
                 href2={"#"} icon2={"fas fa-tasks"} card2={"Gestionar Pedidos"}
-                card2_1={"Gestionar Pedidos"} href1card2={"/Crearpredio"} name1card2={"Crear Predios"} href2card2={"#"} name2card2={"Editar Predios"} href3card2={"#"} name3card2={"Eliminar Predios"}
+                card2_1={"Gestionar Pedidos"} href1card2={"/Crearpredio"} name1card2={"Crear Predios"} href2card2={"/editarpredios"} name2card2={"Editar Predios"} href3card2={"/eliminarpredios"} name3card2={"Eliminar Predios"}
                 href3={"#"} icon3={"fas fa-house-user"} card3={"Gestionar Usuarios"}
                 card3_1={"Gestionar Usuarios"} href1card3={"/Crearcuenta"} name1card3={"Crear Usuarios"} href2card3={"/Gestionaru"} name2card3={"Editar Usuarios"} href3card3={"/Eliminaruser"} name3card3={"Eliminar Usuarios"}
                 titulo2={"Pagos"}
@@ -20,7 +20,8 @@ function Crearcuenta() {
                 href5={"#"} icon5={"fas fa-handshake"} card5={"Convenios de Pagos"}
                 href6={"#"} icon6={"fas fa-dollar-sign"} card6={"Multas"}
                 href7={"#"} icon7={"fas fa-calendar-alt"} card7={"Fechas de Pagos y Descuentos"}
-                href8={"/"} icon8={"fas fa-sign-out-alt"} card8={"Cerrar Sesión"} />
+                href8={"/"} icon8={"fas fa-sign-out-alt"} card8={"Cerrar Sesión"}
+            />
             {/* <!-- End of Sidebar --> */}
 
             {/* <!-- Content Wrapper --> */}
