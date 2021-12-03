@@ -9,7 +9,7 @@ class Sidebar extends React.Component{
             {/* <!-- Sidebar - Brand --> */}
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href={this.props.href0}>
                 <div className="sidebar-brand-icon">
-                    <img src={this.props.primephoto} />
+                    <img src={this.props.primephoto} alt="foto"/>
                 </div>
             </a>
 
@@ -60,8 +60,8 @@ class Sidebar extends React.Component{
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header"> {this.props.card3_1}:</h6>
                         <a className="collapse-item" href={this.props.href1card3}>{this.props.name1card3}</a>
-                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name1card3}</a>
-                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name1card3}</a>
+                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name2card3}</a>
+                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name3card3}</a>
                     </div>
                 </div>
             </li>
@@ -101,8 +101,6 @@ class Sidebar extends React.Component{
                     <i className={this.props.icon7}></i>
                     <span> {this.props.card7}</span></a>
             </li>
-            {/* <!-- Divider --> */}
-            <hr className="sidebar-divider" />
 
             {/* <!-- Nav Item - Cerrar Sesion --> */}
             <li className="nav-item">
