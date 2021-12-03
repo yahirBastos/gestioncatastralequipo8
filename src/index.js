@@ -13,8 +13,10 @@ import Dashboardexterno from './Dashboardexterno';
 import Asociarpredios from './Asociarpredios';
 import Edicionpredios from './Edicionpredios';
 import Edicionusuario from './Edicionusuarios';
+import Gestionaru from './Gestionaru';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,6 +34,8 @@ ReactDOM.render(
        <Route path="/asociarpredio" element={<Asociarpredios/>}/>
        <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
        <Route path="/edicionusuarios" element={<Edicionusuario/>}/>
+       <Route path="/gestionaru" element={<Gestionaru/>}/>
+
      </Routes>
    </Router>
   </React.StrictMode>
