@@ -60,8 +60,8 @@ class Sidebar extends React.Component{
                     <div className="bg-white py-2 collapse-inner rounded">
                         <h6 className="collapse-header"> {this.props.card3_1}:</h6>
                         <a className="collapse-item" href={this.props.href1card3}>{this.props.name1card3}</a>
-                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name2card3}</a>
-                        <a className="collapse-item" href={this.props.href1card3}>{this.props.name3card3}</a>
+                        <a className="collapse-item" href={this.props.href2card3}>{this.props.name2card3}</a>
+                        <a className="collapse-item" href={this.props.href3card3}>{this.props.name3card3}</a>
                     </div>
                 </div>
             </li>

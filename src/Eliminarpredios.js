@@ -1,10 +1,10 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Data from './jsons/users.js';
+import Data from './jsons/predios.js';
 import React from "react";
 import Boton from "./Componentes/Boton";
 
-function Gestionaru() {
+function Eliminarpredios() {
     return (
         <><div id="wrapper">
 
@@ -46,57 +46,57 @@ function Gestionaru() {
 
                         {/* <!-- Page Heading --> */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">Gestionar usuario</h1>
+                            <h1 className="h3 mb-0 text-gray-800">Gestionar Predio</h1>
                         </div>
 
                         {/* <!-- Content Row --> */}
                         <div className="card shadow mb-4">
                             <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-warning text-uppercase mb-1">Lista de Usuarios</h6>
+                                <h6 className="m-0 font-weight-bold text-warning text-uppercase mb-1">Lista de Predios</h6>
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
                                     <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
+                                                <th>Codigo predio</th>
+                                                <th>Nombre del propietario</th>
                                                 <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
+                                                <th>Area</th>
+                                                <th>Area Construida</th>
+                                                <th>Dirección</th>
+                                                <th>Barrio</th>
+                                                <th>Estrato</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
+                                                <th>Codigo predio</th>
+                                                <th>Nombre del propietario</th>
                                                 <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
+                                                <th>Area</th>
+                                                <th>Area Construida</th>
+                                                <th>Dirección</th>
+                                                <th>Barrio</th>
+                                                <th>Estrato</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
 
-                                            {Data.users.map((users1, index) => {
+                                            {Data.predios.map((predios1, index) => {
                                                 return (
-                                                    <tr key={users1.codigo}>
-                                                        <td>{users1.codigo}</td>
-                                                        <td>{users1.nivel}</td>
-                                                        <td>{users1.nombre}</td>
-                                                        <td>{users1.apellido}</td>
-                                                        <td>{users1.telefono}</td>
-                                                        <td>{users1.documento}</td>
-                                                        <td>{users1.email}</td>
-                                                        <td>{users1.contrasena}</td>
-                                                        <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td>
+                                                    <tr key={predios1.codigo}>
+                                                        <td>{predios1.codigo}</td>
+                                                        <td>{predios1.nombre}</td>
+                                                        <td>{predios1.documento}</td>
+                                                        <td>{predios1.area}</td>
+                                                        <td>{predios1.areac}</td>
+                                                        <td>{predios1.direccion}</td>
+                                                        <td>{predios1.barrio}</td>
+                                                        <td>{predios1.estrato}</td>
+                                                        <td>{<Boton link={"#"} codigo={predios1.codigo} texto={"Eliminar"} />}</td>
                                                     </tr>
                                                 );
                                             })}
@@ -117,4 +117,4 @@ function Gestionaru() {
     );
 }
 
-export default Gestionaru;
+export default Eliminarpredios;

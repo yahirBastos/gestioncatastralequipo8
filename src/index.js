@@ -10,6 +10,9 @@ import Olvido from './Olvido';
 import Crearcuenta from './Crearcuenta';
 import Dashboardexterno from './Dashboardexterno';
 import Gestionaru from './Gestionaru';
+import Eliminaruser from './Eliminaruser';
+import Editarpredios from './Editarpredios';
+import Eliminarpredios from './Eliminarpredios';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -27,7 +30,9 @@ ReactDOM.render(
        <Route path="/crearcuenta" element={<Crearcuenta/>}/>
        <Route path="/externo" element={<Dashboardexterno/>}/>
        <Route path="/gestionaru" element={<Gestionaru/>}/>
-
+       <Route path="/eliminaruser" element={<Eliminaruser/>}/>
+       <Route path="/editarpredios" element={<Editarpredios/>}/>
+       <Route path="/eliminarpredios" element={<Eliminarpredios/>}/>
      </Routes>
    </Router>
   </React.StrictMode>
