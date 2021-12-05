@@ -9,7 +9,6 @@ import Crearpredio from './Crearpredios';
 import Olvido from './Olvido';
 import Crearcuenta from './Crearcuenta';
 import Dashboardexterno from './Dashboardexterno';
-
 import Asociarpredios from './Asociarpredios';
 import Edicionpredios from './Edicionpredios';
 import Edicionusuario from './Edicionusuarios';
@@ -19,7 +18,10 @@ import Editarpredios from './Editarpredios';
 import Eliminarpredios from './Eliminarpredios';
 import Pagosenlinea from './Pagosenlinea';
 import Dashboardinterno from './Dashboaardinterno';
+import Aprobconvenios from './Aprobconvenios';
 import reportWebVitals from './reportWebVitals';
+import PrediosAsociadosUser from './PrediosAsociadosUser';
+import Soliconvenio from './Soliconvenio';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -35,7 +37,6 @@ ReactDOM.render(
        <Route path="/olvido" element={<Olvido/>}/>
        <Route path="/crearcuenta" element={<Crearcuenta/>}/>
        <Route path="/externo" element={<Dashboardexterno/>}/>
-
        <Route path="/asociarpredio" element={<Asociarpredios/>}/>
        <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
        <Route path="/edicionusuarios" element={<Edicionusuario/>}/>
@@ -45,6 +46,11 @@ ReactDOM.render(
        <Route path="/eliminarpredios" element={<Eliminarpredios/>}/>
        <Route path="/pagosenlinea" element={<Pagosenlinea/>}/>
        <Route path="/interno" element={<Dashboardinterno/>}/>
+       <Route path="/aprobconvenios" element={<Aprobconvenios/>}/>
+       <Route path="/soliconvenio" element={<Soliconvenio/>}/>
+       <Route path="/prediosAsociadosUser" element={<PrediosAsociadosUser/>}/>
+       
+
      </Routes>
    </Router>
   </React.StrictMode>
