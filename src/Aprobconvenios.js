@@ -1,6 +1,6 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Contenidoboard from "./Componentes/Contenidoboard/Contenidoboard";
+
 import Boton from "./Componentes/Boton";
 import Data from './jsons/convenios.js';
     
