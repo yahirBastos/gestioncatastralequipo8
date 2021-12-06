@@ -22,6 +22,7 @@ import Aprobconvenios from './Aprobconvenios';
 import reportWebVitals from './reportWebVitals';
 import PrediosAsociadosUser from './PrediosAsociadosUser';
 import Soliconvenio from './Soliconvenio';
+import Gestioncobros from './Gestioncobros';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -48,6 +49,7 @@ ReactDOM.render(
        <Route path="/interno" element={<Dashboardinterno/>}/>
        <Route path="/aprobconvenios" element={<Aprobconvenios/>}/>
        <Route path="/soliconvenio" element={<Soliconvenio/>}/>
+       <Route path="/cobros" element={<Gestioncobros/>}/>
        <Route path="/prediosAsociadosUser" element={<PrediosAsociadosUser/>}/>
        
 
