@@ -46,12 +46,18 @@ function Gestioncobros() {
                         </div>
 
                         {/* <!-- Content Row --> */}
-                        <div class="alert alert-danger" role="alert">
-                            <b>¡Tenga Cuidado!</b> al hacer clic en este botón va a generar un cobro a todos los dueños de predios
+                        <div class="card o-hidden border-0 shadow-lg my-5">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="alert alert-danger" role="alert">
+                                        <b>¡Tenga Cuidado!</b> al hacer clic en este botón va a generar un cobro a todos los dueños de predios
+                                    </div>
+                                    <a className="btn btn-primary" data-toggle="modal" data-target="#logoutModal">
+                                        Enviar Cobro General
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <a className="btn btn-primary btn-user btn-block" href="#" data-toggle="modal" data-target="#logoutModal">
-                            Enviar Cobro General
-                        </a>
                     </div>
 
                 </div>
@@ -70,11 +76,28 @@ function Gestioncobros() {
                         <div class="modal-body">Realmente desea enviar cobro?</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">NO</button>
-                            <a class="btn btn-primary" href="/Dashboard">SI</a>
+                            <a class="btn btn-primary" href="/Dashboard" data-toggle="modal" data-target="#paysent">SI</a>
                         </div>
                     </div>
                 </div>
-            </div></>
+            </div>
+            <div class="modal fade" id="paysent" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">¡COBROS GENERADOS!</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Cobros enviado exitosamente</div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary" href="/Dashboard">Cerrar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div></>
     );
 }
 
