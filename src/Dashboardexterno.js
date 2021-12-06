@@ -10,8 +10,8 @@ function Dashboardexterno(){
                 href0={"/Externo"} primephoto={"assets/Logogcm.png"}
                 href1={"/Externo"} icon1={"fas fa-house-user"} card1={"Dashboard"}
                 titulo={"Gestiones"}
-                href2={"/Asociarpredio"} icon2={"fas fa-tasks"} card2={"Asociar Predio"}
-                card2_1={"Asociar Predio"} href1card2={"/Asociarpredio"} name1card2={"Asociar Predio"}
+                href2={"/Asociarpredio"} icon2={"fas fa-tasks"} card2={"Predios"}
+                card2_1={"Predios"} href1card2={"/Asociarpredio"} name1card2={"Predios Asociados"}href2card2={"/Asociarpredio"} name2card2={"Asociar Predio"}
                 href3={"#"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios de Pagos"}
                 card3_1={"Convenios de Pagos"} href1card3={"#"} name1card3={"Convenios de Pagos"}
                 titulo2={"Pagos"}
@@ -46,7 +46,7 @@ function Dashboardexterno(){
                         <Contenidoboard link1={"/Asociarpredio"} titulo1={"Asociar Predio"} icon={"fas fa-tasks fa-2x text-gray-300"} 
                         link2={"#"} titulo2={"Pagos en Linea"} icon2={"far fa-money-bill-alt fa-2x text-gray-300"} 
                         link3={"#"} titulo3={"Fechas de Pagos y Descuentos"} icon3={"fas fa-calendar-check fa-2x text-gray-300"} 
-                        link4={"#"} titulo4={"Fechas de Pagos y Descuentos"} icon4={"fas fa-percentage fa-2x text-gray-300"}
+                        link4={"#"} titulo4={"Predios Asociados"} icon4={"fas fa-list-ol fa-2x text-gray-300"}
                         frase={"Bienvenidos al portal de trámites en línea de la Gobernación del Magdalena. Aquí podrá, realizar el pago de sus impuestos, Realizar Convenios de pagos, Verificar Fechas de pagos, entre otros servicios virtuales."} />
                     </div>
                 </div>
