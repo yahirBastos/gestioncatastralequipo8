@@ -23,6 +23,9 @@ import reportWebVitals from './reportWebVitals';
 import PrediosAsociadosUser from './PrediosAsociadosUser';
 import Soliconvenio from './Soliconvenio';
 import Gestioncobros from './Gestioncobros';
+import Gestionmultas from './Gestionmultas';
+import Gcobrosinterno from './Gestioncobrosinterno';
+import Gmultasinterno from './Gestionmultasinterno';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -51,6 +54,9 @@ ReactDOM.render(
        <Route path="/soliconvenio" element={<Soliconvenio/>}/>
        <Route path="/cobros" element={<Gestioncobros/>}/>
        <Route path="/prediosAsociadosUser" element={<PrediosAsociadosUser/>}/>
+       <Route path="/multas" element={<Gestionmultas/>}/>
+       <Route path="/cobrosinterno" element={<Gcobrosinterno/>}/>
+       <Route path="/multasinterno" element={<Gmultasinterno/>}/>
        
 
      </Routes>

@@ -2,7 +2,7 @@ import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import Alertas from "./Componentes/Alertas";
 
-function Gestioncobros() {
+function Gestionmultas() {
     return (
         <><div id="wrapper">
 
@@ -42,13 +42,13 @@ function Gestioncobros() {
 
                         {/* <!-- Page Heading --> */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">Gestión de Cobros</h1>
+                            <h1 className="h3 mb-0 text-gray-800">Gestión Multas</h1>
                         </div>
 
                         {/* <!-- Content Row --> */}
-                        <Alertas href={""}bold={"¡Tenga Cuidado "} texto={"al hacer clic en este botón va a generar un cobro a todos los dueños de predios."} boton={"Enviar Cobro General"} 
-                        titulo={"ALERTA"} cuerpo={"Realmente desea enviar cobro?"} boton1={"NO"} href1={"/Dashboard"} boton2={"SI"}
-                        titulo2={"¡COBROS GENERADOS!"} cuerpo2={"Cobros enviado exitosamente"} href2={"/Dashboard"} boton3={"Cerrar"}/>
+                        <Alertas href={""}bold={"¡Tenga Cuidado "} texto={"al hacer clic en este botón va a generar una multa alos dueños de predios."} boton={"Enviar Multas"} 
+                        titulo={"ALERTA"} cuerpo={"Realmente desea enviar multa?"} boton1={"NO"} href1={"/Dashboard"} boton2={"SI"}
+                        titulo2={"¡MULTA GENERADA!"} cuerpo2={"Multa enviada exitosamente"} href2={"/Dashboard"} boton3={"Cerrar"}/>
                     </div>
 
                 </div>
@@ -57,4 +57,4 @@ function Gestioncobros() {
     )
 }
 
-export default Gestioncobros;
+export default Gestionmultas;
