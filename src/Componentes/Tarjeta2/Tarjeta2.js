@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Tarjeta extends React.Component {
+class Tarjeta2 extends React.Component {
     render() {
         return (
 
@@ -16,4 +16,4 @@ class Tarjeta extends React.Component {
     }
 }
 
-export default Tarjeta;
+export default Tarjeta2;

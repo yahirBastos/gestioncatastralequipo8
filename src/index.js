@@ -5,13 +5,13 @@ import Home from './Home';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
-import Crearpredio from './Crearpredios';
+import Crearpredios from './Crearpredios';
 import Olvido from './Olvido';
 import Crearcuenta from './Crearcuenta';
 import Dashboardexterno from './Dashboardexterno';
 import Asociarpredios from './Asociarpredios';
 import Edicionpredios from './Edicionpredios';
-import Edicionusuario from './Edicionusuarios';
+import Edicionusuarios from './Edicionusuarios';
 import Gestionaru from './Gestionaru';
 import Eliminaruser from './Eliminaruser';
 import Editarpredios from './Editarpredios';
@@ -21,6 +21,7 @@ import Dashboardinterno from './Dashboaardinterno';
 import Aprobconvenios from './Aprobconvenios';
 import reportWebVitals from './reportWebVitals';
 import PrediosAsociadosUser from './PrediosAsociadosUser';
+import Prueba from './Prueba';
 import Soliconvenio from './Soliconvenio';
 import Gestioncobros from './Gestioncobros';
 import Gestionmultas from './Gestionmultas';
@@ -38,13 +39,13 @@ ReactDOM.render(
        <Route path="/login" element={<Login/>}/>
        <Route path="/register" element={<Register/>}/>
        <Route path="/dashboard" element={<Dashboard/>}/>
-       <Route path="/crearpredio" element={<Crearpredio/>}/>
+       <Route path="/crearpredios" element={<Crearpredios/>}/>
        <Route path="/olvido" element={<Olvido/>}/>
        <Route path="/crearcuenta" element={<Crearcuenta/>}/>
        <Route path="/externo" element={<Dashboardexterno/>}/>
-       <Route path="/asociarpredio" element={<Asociarpredios/>}/>
+       <Route path="/asociarpredios" element={<Asociarpredios/>}/>
        <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
-       <Route path="/edicionusuarios" element={<Edicionusuario/>}/>
+       <Route path="/edicionusuarios" element={<Edicionusuarios/>}/>
        <Route path="/gestionaru" element={<Gestionaru/>}/>
        <Route path="/eliminaruser" element={<Eliminaruser/>}/>
        <Route path="/editarpredios" element={<Editarpredios/>}/>
@@ -59,6 +60,7 @@ ReactDOM.render(
        <Route path="/cobrosinterno" element={<Gcobrosinterno/>}/>
        <Route path="/multasinterno" element={<Gmultasinterno/>}/>
        <Route path="/fechaspago" element={<Fechaspagos/>}/>
+       <Route path="/prueba" element={<Prueba/>}/>
 
      </Routes>
    </Router>

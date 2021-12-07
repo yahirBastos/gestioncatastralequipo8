@@ -1,7 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 class Formcrearcuenta extends React.Component{
+    enviar = (e) => {
+        e.preventDefault();
+        const data = {
+        codigodeusuario: e.target.codigodeusuario.value,
+        niveldeusuario: e.target.niveldeusuario.value,
+        nombres: e.target.nombres.value,
+        apellidos: e.target.apellidos.value,
+        gender: e.target.gender.value,
+        telefono: e.target.telefono.value,
+        tipodocumento: e.target.tipodocumento.value,
+        numerodocumento: e.target.numerodocumento.value,
+        email: e.target.email.value,
+        contrasena: e.target.contrasena.value,
+        repcontrasena: e.target.repcontrasena.value,
+        };
+    
+        this.props.procDatos(data)
+    }
     render(){
         return(
             <div className="container-fluid">
@@ -9,7 +27,7 @@ class Formcrearcuenta extends React.Component{
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">{this.props.titulo} </h1>
             </div>
-
+            <form onSubmit = {this.enviar}>
             <div class="form-group row">
                 <div class="col-sm-6 ">
                     <input type="text" class="form-control form-control-user" id="examplecodigo"
@@ -17,10 +35,10 @@ class Formcrearcuenta extends React.Component{
                     <br />
                 </div>
                 <div class="col-sm-6 ">
-                    <select class="form-control form-control-userselect" id="Niveldeusuario" name = {this.props.Niveldeusuario}>
+                    <select class="form-control form-control-userselect" id="niveldeusuario" name = {this.props.niveldeusuario}>
                         <option value="choice">Nivel de Usuario</option>
-                        <option value="Masculino">Administrador</option>
-                        <option value="Femenino">Usuario Interno</option>
+                        <option value="admin">Administrador</option>
+                        <option value="interno">Usuario Interno</option>
                     </select>
                 </div>
 
@@ -46,15 +64,15 @@ class Formcrearcuenta extends React.Component{
 
                 <div class="col-sm-6">
                     <input type="text" class="form-control form-control-user"
-                        id="exampletelefono" placeholder="Telefono" name = {this.props.Telefono}/>
+                        id="telefono" placeholder="Telefono" name = {this.props.telefono}/>
                     <br/>
                 </div>   
                 
                 <div class="col-sm-6">
-                        <select class="form-control form-control-userselect" id="documento" name = {this.props.tipodocumento}>
+                        <select class="form-control form-control-userselect" id="tipodocumento" name = {this.props.tipodocumento}>
                             <option value="choice">Tipo de Documento</option>
-                            <option value="Masculino">Cédula de Ciudadania</option>
-                            <option value="Femenino">Cédula Extanjera</option>
+                            <option value="cedula">Cédula de Ciudadania</option>
+                            <option value="Cextranjera">Cédula Extanjera</option>
                             <option value="Otro">Pasaporte</option>
                         </select>
                         <br />
@@ -73,17 +91,20 @@ class Formcrearcuenta extends React.Component{
 
                 <div class="col-sm-6">
                     <input type="text" class="form-control form-control-user"
-                        id="examplepassword" placeholder="Contraseña" name = {this.props.contraseña}/>
+                        id="contrasena" placeholder="Contraseña" name = {this.props.contrasena}/>
                     <br/>
                 </div> 
 
                 <div class="col-sm-6">
                     <input type="text" class="form-control form-control-user"
-                        id="examplereppass" placeholder="Repetir Contraseña" name = {this.props.repcontraseña}/>
+                        id="repcontrasena" placeholder="Repetir Contraseña" name = {this.props.repcontrasena}/>
                     <br/>
-                </div>  
-                <Link to={this.props.linkregistropredio} className="btn btn-primary btn-user btn-block">{this.props.nombreboton}</Link>
+                </div>
+                <button className="btn btn-primary btn-user btn-block">{this.props.nombreboton}</button>  
+                
             </div>
+            </form>
+            
         </div>
         )
     }
