@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Frases from "./Componentes/Frases/";
 import Tarjeta from "./Componentes/Tarjeta/";
 import Imagen from "./Componentes/Imagen/";
