@@ -2,6 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class Formlogin extends React.Component {
+
+    enviar = (e) => {
+        e.preventDefault();
+        const data = {
+          usuario: e.target.usuario.value,
+          contrasena: e.target.contrasena.value,
+        };
+    
+        this.props.procDatos(data)
+    }
+
+    
     render() {
         return (
 
@@ -10,7 +22,7 @@ class Formlogin extends React.Component {
                     <div className="text-center">
                         <h1 className="h4 text-gray-900 mb-4">{this.props.titulo}</h1>
                     </div>
-                    <form className="user">
+                    <form className="user" onSubmit = {this.enviar}>
                         <div className="form-group">
                             <input type="text" className="form-control form-control-user"
                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -27,7 +39,8 @@ class Formlogin extends React.Component {
                                     Datos</label >
                             </div>
                         </div>
-                        <Link to={this.props.linkinicio} className="btn btn-primary btn-user btn-block">Iniciar Sesión</Link>
+                        <button className="btn btn-primary btn-user btn-block">Iniciar Sesión</button>
+                        
                         <br />
                         <div className="text-center">
                             <Link to={this.props.linkolvido} className="small">Olvidé mi contraseña</Link>
