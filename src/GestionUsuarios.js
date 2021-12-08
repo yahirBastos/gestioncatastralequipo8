@@ -1,33 +1,20 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-// import Data from './jsons/users.js';
+import Data from './jsons/users.js';
 import React from "react";
 import Boton from "./Componentes/Boton";
 
-// import Tabla from "./Componentes/Tabla";
+const renderPosts = async () =>{
+
+    let uri = "http://localhost:3004/users";
+
+    const res = await fetch(uri);
+    const usuario = await res.json();
+    console.log(usuario);
+
+}
 
 function Gestionaru() {
-
-    const [usersApi, setUserApi] = React.useState([]);
-
-    React.useEffect(() => {
-        
-        fetch('http://localhost:3004/users')
-            .then(response => response.json())
-            .then(data => setUserApi(data));
-        console.log(usersApi);
-
-    }, [usersApi]);
-
-
-    // const [data, setData] = React.useState([]);
-
-    // React.useEffect(() => {
-    // gameData(false).then(res => {
-    //     setData(res.data);
-    // });
-    // }, [data]);
-
     return (
         <><div id="wrapper">
 
@@ -79,9 +66,6 @@ function Gestionaru() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    {/* <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0"> */}
-                                    {/* <Tabla data={usersApi} /> */}
-                                    {/* </table> */}
                                     <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
@@ -110,25 +94,27 @@ function Gestionaru() {
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            {usersApi.map((user, index) => {
+
+                                            {Data.users.map((users1, index) => {
                                                 return (
-                                                    <tr key={user.id}>
-                                                        <td>{user.id}</td>
-                                                        <td>{user.nivel}</td>
-                                                        <td>{user.nombre}</td>
-                                                        <td>{user.apellido}</td>
-                                                        <td>{user.telefono}</td>
-                                                        <td>{user.documento}</td>
-                                                        <td>{user.email}</td>
-                                                        <td>{user.contrasena}</td>
-                                                        <td>{user.acciones}</td>
-                                                        {/* <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td> */}
+                                                    <tr key={users1.codigo}>
+                                                        <td>{users1.codigo}</td>
+                                                        <td>{users1.nivel}</td>
+                                                        <td>{users1.nombre}</td>
+                                                        <td>{users1.apellido}</td>
+                                                        <td>{users1.telefono}</td>
+                                                        <td>{users1.documento}</td>
+                                                        <td>{users1.email}</td>
+                                                        <td>{users1.contrasena}</td>
+                                                        <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td>
                                                     </tr>
                                                 );
                                             })}
-                                        </tbody>
-                                    </table>
 
+
+                                        </tbody>
+
+                                    </table>
                                 </div>
                             </div>
                         </div>

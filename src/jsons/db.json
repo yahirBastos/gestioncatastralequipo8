@@ -1,0 +1,142 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "nivel": "admin",
+            "nombre": "Andres",
+            "apellido": "Goyes",
+            "telefono": "315468879",
+            "documento": "1085259268",
+            "email": "andresgo100@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        },
+        {
+            "id": 2,
+            "nivel": "usuario externo",
+            "nombre":"Samuel",
+            "apellido": "Morales",
+            "telefono": "315465582",
+            "documento": "108525255",
+            "email": "samueld@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        },
+        {
+            "id": 3,
+            "nivel": "usuario interno",
+            "nombre":"Maria",
+            "apellido": "Rosas",
+            "telefono": "3151234758",
+            "documento": "1085587478",
+            "email": "Mariar@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        },
+        {
+            "id": 4,
+            "nivel": "usuario externo",
+            "nombre": "Flor",
+            "apellido": "Castillo",
+            "telefono": "3151478596",
+            "documento": "1085145874",
+            "email": "Florc@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        },
+        {
+            "id": 5,
+            "nivel": "usuario externo",
+            "nombre":"Tiger",
+            "apellido": "Nixon",
+            "telefono": "315149454",
+            "documento": "10851434545",
+            "email": "tnsdfa@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        },
+        {
+            "id": 6,
+            "nivel": "usuario interno",
+            "nombre":"Garrett",
+            "apellido": "Winters",
+            "telefono": "315148965",
+            "documento": "10851434545",
+            "email": "gwsdfa@gmail.com",
+            "contrasena": "******",
+            "acciones": "editar"
+
+        }
+
+    ],
+    "predios":[
+        {
+            "id": 1,
+            "nombre": "Tiger Nixon",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+
+        },
+        {
+            "id": 2,
+            "nombre": "Garrett Winters",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+
+        },
+        {
+            "id": 3,
+            "nombre": "Ashton Cox",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+        },
+        {
+            "id": 4,
+            "nombre": "Cedric Kelly",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+        },
+        {
+            "id": 5,
+            "nombre": "Airi Satou",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+        },
+        {
+            "id": 6,
+            "nombre": "Brielle Williamson",
+            "documento": "12345789",
+            "area": "1000",
+            "areac": "500",
+            "direccion": "Cll 4 # 6-7",
+            "barrio": "Ciudad Jardin",
+            "estrato": "5"
+
+        }
+    ]
+}
