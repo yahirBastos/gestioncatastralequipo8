@@ -2,22 +2,24 @@ import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
 import Data1 from './jsons/prediosdeuda.js';
 import Boton from "./Componentes/Boton";
-function Soliconvenio() {
+function Soliconvenio1() {
     return (
         <><div id="wrapper">
             {/* <!-- Sidebar --> */}
             <Sidebar 
-                href0={"/Externo"} primephoto={"assets/Logogcm.png"}
-                href1={"/Externo"} icon1={"fas fa-house-user"} card1={"Dashboard"}
+                href0={"/interno"} primephoto={"assets/Logogcm.png"}
+                href1={"/interno"} icon1={"fas fa-house-user"} card1={"Dashboard"}
                 titulo={"Gestiones"}
-                href2={"/Asociarpredios"} icon2={"fas fa-tasks"} card2={"Predios"}
-                card2_1={"Predios"} href1card2={"/PrediosAsociadosUser"} name1card2={"Predios Asociados"}href2card2={"/Asociarpredios"} name2card2={"Asociar Predio"}
-                href3={"/Soliconvenio"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios"}
-                card3_1={"Convenios de Pagos"} href1card3={"/Soliconvenio"} name1card3={"Convenios de Pagos"}
+                href2={"#"} icon2={"fas fa-tasks"} card2={"Gestionar Pedidos"}
+                card2_1={"Gestionar Pedidos"} href1card2={"/Crearpredios1"} name1card2={"Crear Predios"} href2card2={"/editarpredios1"} name2card2={"Editar Predios"} href3card2= {"/eliminarpredios1"} name3card2={"Eliminar Predios"}
+                href3={"/soliconvenio1"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios de Pagos"}
+                card3_1={"Convenios de Pagos"} href1card3={"aprobconvenios1"} name1card3={"Convenios de Pagos"}
                 titulo2={"Pagos"}
-                href4={"/Pagosenlinea"} icon4={"far fa-money-bill-alt"} card4={"Pagos en Linea"}
-                href5={"/"} icon5={"fas fa-sign-out-alt"} card5={"Cerrar Sesión"}
-            />
+                href4={"/cobrosinterno"} icon4={"far fa-money-bill-alt"} card4={"Cobros"}
+                href5={"/fechaspagos1"} icon5={"fas fa-calendar-alt"} card5={"Fechas de Pagos y Descuentos"}
+                href6={"/multasinterno"} icon6={"fas fa-dollar-sign"} card6={"Multas"}
+                href7={"/"} icon7={"fas fa-sign-out-alt"} card7={"Cerrar Sesión"}
+                />
             {/* <!-- End of Sidebar --> */}
 
             {/* <!-- Content Wrapper --> */}
@@ -102,4 +104,4 @@ function Soliconvenio() {
         </div></>
     );
 }
-export default Soliconvenio
+export default Soliconvenio1

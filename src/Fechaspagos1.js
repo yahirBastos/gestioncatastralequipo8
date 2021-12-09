@@ -1,8 +1,8 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Alertas from "./Componentes/Alertas";
+import DemoApp from "./Componentes/Calendar/Calendar";
 
-function Gmultasinterno() {
+function Fechaspagos1() {
     return (
         <><div id="wrapper">
 
@@ -30,26 +30,27 @@ function Gmultasinterno() {
                 <div id="content">
 
                     {/* <!-- Topbar --> */}
-                    <Navbar linksearch={"#"} linknotifi={"#"} contadornotifi={"3+"} linkncontenidonotifi1={"#"} fechanotific={"2/Dic/2021"} 
-                    contenidonotifi={"Recibo Pagado"} linkncontenidonotifi2={"#"} fechanotific2={"2/Dic/2021"} contenidonotifi2={"Recibo Pagado"} linkncontenidonotifi3={"#"} fechanotific3={"5/Nov/2021"} 
-                    contenidonotifi3={"Recibo Pagado"} linkmensajes={"#"} contadormensajes={"4+"} contenidomensajes={"Recibo Pagado"} linkncontenidomensaje={"#"} contadormensaje={"3+"} contenidomensaje={"Pago de Recibo"} remitentemensaje={"Norma Diaz"} 
-                    linkncontenidomensaje2={"#"} contenidomensaje2={"Recibo Pagado"} remitentemensaje2={"Martin Perez"} contenidomensaje3={"Recibo Pagado"} remitentemensaje3={"Maria Perez"} linkncontenidomensaje3={"#"} 
-                    nombredueño={"Santiago Hernandez"}
+                    <Navbar linksearch={"#"} linknotifi={"#"} contadornotifi={"3+"} linkncontenidonotifi1={"#"} fechanotific={"2/Dic/2021"}
+                        contenidonotifi={"Recibo Pagado"} linkncontenidonotifi2={"#"} fechanotific2={"2/Dic/2021"} contenidonotifi2={"Recibo Pagado"} linkncontenidonotifi3={"#"} fechanotific3={"5/Nov/2021"}
+                        contenidonotifi3={"Recibo Pagado"} linkmensajes={"#"} contadormensajes={"4+"} contenidomensajes={"Recibo Pagado"} linkncontenidomensaje={"#"} contadormensaje={"3+"} contenidomensaje={"Pago de Recibo"} remitentemensaje={"Norma Diaz"}
+                        linkncontenidomensaje2={"#"} contenidomensaje2={"Recibo Pagado"} remitentemensaje2={"Martin Perez"} contenidomensaje3={"Recibo Pagado"} remitentemensaje3={"Maria Perez"} linkncontenidomensaje3={"#"}
+                        nombredueño={"Santiago Hernandez"}
                     />
                     {/* <!-- End of Topbar --> */}
 
                     {/* <!-- Begin Page Content --> */}
-                    <div className="container-fluid">
+                    <div class="row justify-content-center">
 
-                        {/* <!-- Page Heading --> */}
-                        <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">Gestión de Cobros</h1>
+                        <div class="col-xl-10 col-lg-12 col-md-9">
+
+                            <div class="card o-hidden border-0 shadow-lg my-5">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <DemoApp/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        {/* <!-- Content Row --> */}
-                        <Alertas href={""}bold={"¡Tenga Cuidado "} texto={"al hacer clic en este botón va a generar una multa alos dueños de predios."} boton={"Enviar Multas"} 
-                        titulo={"ALERTA"} cuerpo={"Realmente desea enviar multa?"} boton1={"NO"} href1={"/Interno"} boton2={"SI"}
-                        titulo2={"¡MULTA GENERADA!"} cuerpo2={"Multa enviada exitosamente"} href2={"/Interno"} boton3={"Cerrar"}/>
                     </div>
                 </div>
             </div>
@@ -57,4 +58,4 @@ function Gmultasinterno() {
     );
 }
 
-export default Gmultasinterno;
+export default Fechaspagos1;
