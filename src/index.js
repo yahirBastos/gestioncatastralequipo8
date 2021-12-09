@@ -32,6 +32,7 @@ import Gestioncobros from './Gestioncobros';
 import Gestionmultas from './Gestionmultas';
 import Gcobrosinterno from './Gestioncobrosinterno';
 import Gmultasinterno from './Gestionmultasinterno';
+import Fechaspagoexterno from './Fechaspagoexterno';
 import Fechaspagos from './Fechaspago';
 import Fechaspagos1 from './Fechaspagos1';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
@@ -73,7 +74,7 @@ ReactDOM.render(
        <Route path="/fechaspago" element={<Fechaspagos/>}/>
        <Route path="/fechaspagos1" element={<Fechaspagos1/>}/>
        <Route path="/prueba" element={<Prueba/>}/>
-
+       <Route path="/fechaspagoexterno" element={<Fechaspagoexterno/>}/>
      </Routes>
    </Router>
   </React.StrictMode>

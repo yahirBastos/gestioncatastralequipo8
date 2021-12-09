@@ -1,8 +1,8 @@
 import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
-import Contenidoboard from "./Componentes/Contenidoboard/Contenidoboard";
+import Frases from "./Componentes/Frases";
 
-function Dashboardexterno(){
+function Fechaspagoexterno(){
     return(
         <><div id="wrapper">
             {/* <!-- Sidebar --> */}
@@ -40,18 +40,21 @@ function Dashboardexterno(){
 
                         {/* <!-- Page Heading --> */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
+                            <h1 className="h3 mb-0 text-gray-800">Fechas de pagos y descuentos</h1>
                         </div>
-
-                        <Contenidoboard link1={"/Asociarpredios"} titulo1={"Asociar Predio"} icon={"fas fa-tasks fa-2x text-gray-300"} 
-                        link2={"/Pagosenlinea"} titulo2={"Pagos en Linea"} icon2={"far fa-money-bill-alt fa-2x text-gray-300"} 
-                        link3={"/fechaspagoexterno"} titulo3={"Fechas de Pagos y Descuentos"} icon3={"fas fa-calendar-check fa-2x text-gray-300"} 
-                        link4={"/PrediosAsociadosUser"} titulo4={"Predios Asociados"} icon4={"fas fa-list-ol fa-2x text-gray-300"}
-                        frase={"Bienvenidos al portal de trámites en línea de la Gobernación del Magdalena. Aquí podrá, realizar el pago de sus impuestos, Realizar Convenios de pagos, Verificar Fechas de pagos, entre otros servicios virtuales."} />
+                        <Frases frase = {"Fecha de pago con descuento:"}/>
+                        <input type="texto" readonly="readonly" className="form-control form-control-user" id="exampleestrato"
+                            placeholder={"17 de diciembre del 2021"} />
+                            <br/>
+                            <br/>
+                        <Frases frase = {"Fecha maxima de pagos:"}/>
+                        <input type="texto" readonly="readonly" className="form-control form-control-user" id="exampleestrato"
+                            placeholder={"22 de diciembre del 2021"} />                        
+                       
                     </div>
                 </div>
             </div>
         </div></>
     );
 }
-export default Dashboardexterno
+export default Fechaspagoexterno

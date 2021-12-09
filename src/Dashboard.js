@@ -48,10 +48,10 @@ function Dashboard() {
                         </div>
 
                         {/* <!-- Content Row --> */}
-                        <Contenidoboard link1={"/Crearpredio"} titulo1={"CREAR NUEVO Predio"} icon={"fas fa-plus-circle fa-2x text-gray-300"} 
+                        <Contenidoboard link1={"/Crearpredios"} titulo1={"CREAR NUEVO Predio"} icon={"fas fa-plus-circle fa-2x text-gray-300"} 
                         link2={"/Crearcuenta"} titulo2={"CREAR NUEVO USUARIO"} icon2={"fas fa-comments fa-2x text-gray-300"} 
-                        link3={"#"} titulo3={"Fecha de pagos y descuentos"} icon3={"fas fa-calendar-check fa-2x text-gray-300"} 
-                        link4={"#"} titulo4={"MULTAS"} icon4={"fas fa-cash-register fa-2x text-gray-300"} 
+                        link3={"/fechaspago"} titulo3={"Fecha de pagos y descuentos"} icon3={"fas fa-calendar-check fa-2x text-gray-300"} 
+                        link4={"/multas"} titulo4={"MULTAS"} icon4={"fas fa-cash-register fa-2x text-gray-300"} 
                         frase={"Bienvenidos al portal de trámites en línea de la Gobernación del Magdalena. Aquí podrá, realizar el pago de sus impuestos, Realizar Convenios de pagos, Verificar Fechas de pagos, entre otros servicios virtuales."} />
                     </div>
                 </div>
