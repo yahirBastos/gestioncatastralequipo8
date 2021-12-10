@@ -22,7 +22,7 @@ class Register extends React.Component {
                                     {/* <!-- Nested Row within Card Body --> */}
                                     <div className="row">
                                         <div className="col-lg-6 d-none d-lg-block bg-register-image"></div>
-                                        <Formregistro procDatos={this.datosFormulario} titulo ={"CREAR UNA NUEVA CUENTA"} nombres ={"nombres"} apellidos ={"apellidos"}  correo ={"correo"} telefono ={"telefono"} sexo ={"sexo"} contrasena ={"contrasena"} repcontrasena ={"repcontrasena"} linkregistro ={"/Register"} linkolvido ={"#"} linklogin ={"/Login"} tipodocumento ={"tipodocumento"} numerodocumento = {"numerodocumento"}/>
+                                        <Formregistro procDatos={this.datosFormulario} titulo ={"CREAR UNA NUEVA CUENTA"} nombres ={"nombres"} apellidos ={"apellidos"}  correo ={"correo"} telefono ={"telefono"} sexo ={"sexo"} contrasena ={"contrasena"} repcontrasena ={"repcontrasena"} linkregistro ={"/Register"} linkolvido ={"/olvido"} linklogin ={"/Login"} tipodocumento ={"tipodocumento"} numerodocumento = {"numerodocumento"}/>
                                     </div>
                                 </div>
                             </div>
