@@ -1,9 +1,6 @@
 import React from 'react';
 // import Boton from "./Componentes/Boton";
 
-let uri = 'http://localhost:3004/users';
-
-
 const Table = (props) => {
     const { data } = props;
     return (
@@ -46,8 +43,7 @@ const Table = (props) => {
                             <td>{user.documento}</td>
                             <td>{user.email}</td>
                             <td>{user.contrasena}</td>
-                            <td>{user.acciones}</td>
-                            {/* <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td> */}
+                            <td><button type="button" class="btn btn-primary">Editar</button></td>
                         </tr>
                     );
                 })}

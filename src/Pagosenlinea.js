@@ -1,9 +1,25 @@
 import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
 import { Link } from "react-router-dom";
+import React from "react";
 import Data from './jsons/pagosenlinea';
 
+import Tabla from "./Componentes/TablaPagosL";
+
+
 function Pagosenlinea() {
+
+    const [pagosApi, setUserApi] = React.useState([]);
+
+    React.useEffect(() => {
+        
+        fetch('http://localhost:4000/plinea')
+            .then(response => response.json())
+            .then(data => setUserApi(data));
+        console.log(pagosApi);
+
+    }, []);
+
     return (
         <><div id="wrapper">
             {/* <!-- Sidebar --> */}
@@ -109,50 +125,9 @@ function Pagosenlinea() {
                                             <hr />
                                             <div class="card-body">
                                                 <div className="table-responsive">
-                                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Elegir</th>
-                                                                <th>N°</th>
-                                                                <th>Código Catastral</th>
-                                                                <th>Área Total (Metros)</th>
-                                                                <th>Área Construida (Metros)</th>
-                                                                <th>Direccion</th>
-                                                                <th>Barrio</th>
-                                                                <th>Estrato</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>Elegir</th>
-                                                                <th>N°</th>
-                                                                <th>Código Catastral</th>
-                                                                <th>Área Total (Metros)</th>
-                                                                <th>Área Construida (Metros)</th>
-                                                                <th>Dirección</th>
-                                                                <th>Barrio</th>
-                                                                <th>Estrato</th>
-                                                            </tr>
-                                                        </tfoot>
-                                                        <tbody>
 
-                                                            {Data.plinea.map((plinea1, index) => {
-                                                                return (
-                                                                    <tr key={plinea1.N}>
-                                                                        <td><input type="checkbox" name="seleccion" id="seleccion"/></td>
-                                                                        <td>{plinea1.N}</td>
-                                                                        <td>{plinea1.codigocatastral}</td>
-                                                                        <td>{plinea1.areatotal}</td>
-                                                                        <td>{plinea1.areaconstruida}</td>
-                                                                        <td>{plinea1.direccion}</td>
-                                                                        <td>{plinea1.barrio}</td>
-                                                                        <td>{plinea1.estrato}</td>
-                                                                    </tr>
-                                                                );
-                                                            })}
-                                                        </tbody>
-
-                                                    </table>
+                                                    <Tabla data={pagosApi}/>
+                                                    
                                                 </div>
                                                 <div class="col-sm-6 ">
                                                     <Link to={"#"} o className="btn btn-primary btn-user btn-block">Pagar en Linea</Link>

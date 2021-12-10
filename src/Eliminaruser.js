@@ -1,10 +1,25 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Data from './jsons/users.js';
+// import Data from './jsons/users.js';
 import React from "react";
-import Boton from "./Componentes/Boton";
+// import Boton from "./Componentes/Boton";
+
+import Tabla from "./Componentes/TablaUserDelete";
 
 function Eliminaruser() {
+
+    const [usersApi, setUserApi] = React.useState([]);
+
+    React.useEffect(() => {
+        
+        fetch('http://localhost:4000/users')
+            .then(response => response.json())
+            .then(data => setUserApi(data));
+        console.log(usersApi);
+
+    }, []);
+
+
     return (
         <><div id="wrapper">
 
@@ -56,55 +71,7 @@ function Eliminaruser() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-
-                                            {Data.users.map((users1, index) => {
-                                                return (
-                                                    <tr key={users1.codigo}>
-                                                        <td>{users1.codigo}</td>
-                                                        <td>{users1.nivel}</td>
-                                                        <td>{users1.nombre}</td>
-                                                        <td>{users1.apellido}</td>
-                                                        <td>{users1.telefono}</td>
-                                                        <td>{users1.documento}</td>
-                                                        <td>{users1.email}</td>
-                                                        <td>{users1.contrasena}</td>
-                                                        <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Eliminar"}/>}</td>
-                                                    </tr>
-                                                );
-                                            })}
-
-
-                                        </tbody>
-
-                                    </table>
+                                <Tabla data={usersApi} />
                                 </div>
                             </div>
                         </div>

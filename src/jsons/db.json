@@ -8,8 +8,8 @@
             "telefono": "315468879",
             "documento": "1085259268",
             "email": "andresgo100@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         },
         {
@@ -20,8 +20,8 @@
             "telefono": "315465582",
             "documento": "108525255",
             "email": "samueld@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         },
         {
@@ -32,8 +32,8 @@
             "telefono": "3151234758",
             "documento": "1085587478",
             "email": "Mariar@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         },
         {
@@ -44,8 +44,8 @@
             "telefono": "3151478596",
             "documento": "1085145874",
             "email": "Florc@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         },
         {
@@ -56,8 +56,8 @@
             "telefono": "315149454",
             "documento": "10851434545",
             "email": "tnsdfa@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         },
         {
@@ -68,8 +68,8 @@
             "telefono": "315148965",
             "documento": "10851434545",
             "email": "gwsdfa@gmail.com",
-            "contrasena": "******",
-            "acciones": "editar"
+            "contrasena": "******"
+            
 
         }
 
@@ -138,5 +138,37 @@
             "estrato": "5"
 
         }
+    ],
+    "plinea":[
+
+        {
+            "N": 1,
+            "codigocatastral": "0001",
+            "areatotal": 100,
+            "areaconstruida": 69,
+            "direccion": "Calle 80#108-69",
+            "barrio": "La Luz",
+            "estrato": "2"
+            
+        },
+        {
+            "N": 2,
+            "codigocatastral": "00025",
+            "areatotal": 200,
+            "areaconstruida": 150,
+            "direccion": "Transversal 40-90",
+            "barrio":"Juarez",
+            "estrato":"3"
+        },
+        {
+            "N": 3,
+            "codigocatastral": "00012",
+            "areatotal": 30,
+            "areaconstruida":200,
+            "direccion": "Carrera 14#108-58",
+            "barrio": "Trinidad",
+            "estrato": "5"
+        }
+
     ]
 }

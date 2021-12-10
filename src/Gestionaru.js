@@ -4,7 +4,7 @@ import Navbar from "./Componentes/Navbar";
 import React from "react";
 import Boton from "./Componentes/Boton";
 
-// import Tabla from "./Componentes/Tabla";
+import Tabla from "./Componentes/TablaUserEdit";
 
 function Gestionaru() {
 
@@ -12,12 +12,12 @@ function Gestionaru() {
 
     React.useEffect(() => {
         
-        fetch('http://localhost:3004/users')
+        fetch('http://localhost:4000/users')
             .then(response => response.json())
             .then(data => setUserApi(data));
         console.log(usersApi);
 
-    }, [usersApi]);
+    }, []);
 
 
     // const [data, setData] = React.useState([]);
@@ -80,54 +80,8 @@ function Gestionaru() {
                             <div className="card-body">
                                 <div className="table-responsive">
                                     {/* <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0"> */}
-                                    {/* <Tabla data={usersApi} /> */}
+                                    <Tabla data={usersApi} />
                                     {/* </table> */}
-                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            {usersApi.map((user, index) => {
-                                                return (
-                                                    <tr key={user.id}>
-                                                        <td>{user.id}</td>
-                                                        <td>{user.nivel}</td>
-                                                        <td>{user.nombre}</td>
-                                                        <td>{user.apellido}</td>
-                                                        <td>{user.telefono}</td>
-                                                        <td>{user.documento}</td>
-                                                        <td>{user.email}</td>
-                                                        <td>{user.contrasena}</td>
-                                                        <td>{user.acciones}</td>
-                                                        {/* <td>{<Boton link = {"#"} codigo ={users1.codigo} texto ={"Editar"}/>}</td> */}
-                                                    </tr>
-                                                );
-                                            })}
-                                        </tbody>
-                                    </table>
 
                                 </div>
                             </div>
