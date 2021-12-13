@@ -1,7 +1,6 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import React from "react";
-
 import Formcrearpredio from "./Componentes/Formcrearpredio/Formcrearpredio";
 class Crearpredios extends React.Component {
     datosFormulario = (data) => {
