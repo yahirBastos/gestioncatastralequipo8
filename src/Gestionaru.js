@@ -1,10 +1,23 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Data from './jsons/users.js';
 import React from "react";
-import Boton from "./Componentes/Boton";
+import TableUsers from "./Componentes/TableUsers";
+
 
 function Gestionaru() {
+    const [usersApi, setUsers] = React.useState([]);
+
+    React.useEffect(() => {
+        
+        fetch('http://localhost:3030/api/get_users')
+        .then(response => response.json())
+        .then(data => {
+            console.log(usersApi)
+            setUsers(data)
+        });
+
+    }, []);
+    
     return (
         <><div id="wrapper">
 
@@ -56,55 +69,7 @@ function Gestionaru() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Codigo</th>
-                                                <th>Nivel</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Documento</th>
-                                                <th>Correo Electronico</th>
-                                                <th>Contraseña</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-
-                                            {Data.users.map((users1, index) => {
-                                                return (
-                                                    <tr key={users1.codigo}>
-                                                        <td>{users1.codigo}</td>
-                                                        <td>{users1.nivel}</td>
-                                                        <td>{users1.nombre}</td>
-                                                        <td>{users1.apellido}</td>
-                                                        <td>{users1.telefono}</td>
-                                                        <td>{users1.documento}</td>
-                                                        <td>{users1.email}</td>
-                                                        <td>{users1.contrasena}</td>
-                                                        <td>{<Boton link = {"/Edicionusuarios"} codigo ={users1.codigo} texto ={"Editar"}/>}</td>
-                                                    </tr>
-                                                );
-                                            })}
-
-
-                                        </tbody>
-
-                                    </table>
+                                <TableUsers data={usersApi}/>
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,15 @@ import React from "react";
 
 class Crearcuenta extends React.Component {
     datosFormulario = (data) => {
-        console.log('desde el Crearcuenta: ', data);
+        fetch("http://localhost:3030/api/crear_usuario", {
+            method: 'POST',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
     }
     render() {
         return (
@@ -45,8 +53,8 @@ class Crearcuenta extends React.Component {
                         {/* <!-- End of Topbar --> */}
 
                         {/* <!-- Begin Form Page --> */}
-                        <Formcrearcuenta procDatos={this.datosFormulario} titulo={"Crear Nueva Cuenta"} codigodeusuario={"codigodeusuario"} niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"}
-                            telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contrasena"} repcontraseña={"repcontrasena"} nombreboton={"Registrar Cuenta"} />
+                        <Formcrearcuenta procDatos={this.datosFormulario} titulo={"Crear Nueva Cuenta"} codigodeusuario={"codigodeusuario"} niveldeusuario={"Nivel"} nombres={"nombre"} apellidos={"apellido"} gender={"gender"}
+                            telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"documento"} email={"email"} contraseña={"contrasena"} repcontraseña={"repcontrasena"} nombreboton={"Registrar Cuenta"} />
 
                     </div>
                 </div>

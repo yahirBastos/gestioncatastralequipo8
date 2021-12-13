@@ -1,10 +1,23 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-import Data from './jsons/predios.js';
 import React from "react";
-import Boton from "./Componentes/Boton";
+import TableDeleEstates from "./Componentes/TableDeleEstates/TableDeleEstates";
 
 function Eliminarpredios1() {
+
+    const [estatesApi, setEstates] = React.useState([]);
+
+    React.useEffect(() => {
+        
+        fetch('http://localhost:3030/api/get_estates')
+        .then(response => response.json())
+        .then(data => {
+            console.log(estatesApi)
+            setEstates(data)
+        });
+
+    }, []);
+
     return (
         <><div id="wrapper">
 
@@ -55,55 +68,7 @@ function Eliminarpredios1() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>
-                                                <th>Codigo predio</th>
-                                                <th>Nombre del propietario</th>
-                                                <th>Documento</th>
-                                                <th>Area</th>
-                                                <th>Area Construida</th>
-                                                <th>Dirección</th>
-                                                <th>Barrio</th>
-                                                <th>Estrato</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Codigo predio</th>
-                                                <th>Nombre del propietario</th>
-                                                <th>Documento</th>
-                                                <th>Area</th>
-                                                <th>Area Construida</th>
-                                                <th>Dirección</th>
-                                                <th>Barrio</th>
-                                                <th>Estrato</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-
-                                            {Data.predios.map((predios1, index) => {
-                                                return (
-                                                    <tr key={predios1.codigo}>
-                                                        <td>{predios1.codigo}</td>
-                                                        <td>{predios1.nombre}</td>
-                                                        <td>{predios1.documento}</td>
-                                                        <td>{predios1.area}</td>
-                                                        <td>{predios1.areac}</td>
-                                                        <td>{predios1.direccion}</td>
-                                                        <td>{predios1.barrio}</td>
-                                                        <td>{predios1.estrato}</td>
-                                                        <td>{<Boton link={"#"} codigo={predios1.codigo} texto={"Eliminar"} />}</td>
-                                                    </tr>
-                                                );
-                                            })}
-
-
-                                        </tbody>
-
-                                    </table>
+                                <TableDeleEstates data={estatesApi} />
                                 </div>
                             </div>
                         </div>

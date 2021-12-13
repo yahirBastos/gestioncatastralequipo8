@@ -6,13 +6,11 @@ class Formcrearpredio extends React.Component {
     enviar = (e) => {
         e.preventDefault();
         const data = {
-
-            codigopredio: e.target.codigopredio.value,
             nombre: e.target.nombre.value,
             tipodocumento: e.target.tipodocumento.value,
-            numerodocumento: e.target.numerodocumento.value,
-            areatotal: e.target.areatotal.value,
-            areaconstruida: e.target.areaconstruida.value,
+            documento: e.target.documento.value,
+            area: e.target.area.value,
+            areac: e.target.areac.value,
             direccion: e.target.direccion.value,
             barrio: e.target.barrio.value,
             estrato: e.target.estrato.value,
@@ -51,19 +49,19 @@ class Formcrearpredio extends React.Component {
 
                         </div>
                         <div class="col-sm-6 ">
-                            <input type="text" class="form-control form-control-user" id="numerodocumento"
+                            <input type="text" class="form-control form-control-user" id="documento"
                                 placeholder="Número de Documento" name={this.props.numerodocumento} />
                             <br />
                         </div>
 
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <input type="text" class="form-control form-control-user"
-                                id="areatotal" placeholder="Área Total del Predio" name={this.props.areatotal} />
+                                id="area" placeholder="Área Total del Predio" name={this.props.areatotal} />
                         </div>
 
                         <div class="col-sm-6">
                             <input type="text" class="form-control form-control-user"
-                                id="areaconstruida" placeholder="Área Construida del Predio" name={this.props.areaconstruida} />
+                                id="areac" placeholder="Área Construida del Predio" name={this.props.areaconstruida} />
                             <br />
                         </div>
 

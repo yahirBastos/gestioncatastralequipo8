@@ -5,14 +5,13 @@ class Formcrearcuenta extends React.Component{
     enviar = (e) => {
         e.preventDefault();
         const data = {
-        codigodeusuario: e.target.codigodeusuario.value,
-        niveldeusuario: e.target.niveldeusuario.value,
-        nombres: e.target.nombres.value,
-        apellidos: e.target.apellidos.value,
+        nivel: e.target.nivel.value,
+        nombre: e.target.nombre.value,
+        apellido: e.target.apellido.value,
         gender: e.target.gender.value,
         telefono: e.target.telefono.value,
         tipodocumento: e.target.tipodocumento.value,
-        numerodocumento: e.target.numerodocumento.value,
+        documento: e.target.documento.value,
         email: e.target.email.value,
         contrasena: e.target.contrasena.value,
         repcontrasena: e.target.repcontrasena.value,
@@ -35,7 +34,7 @@ class Formcrearcuenta extends React.Component{
                     <br />
                 </div>
                 <div class="col-sm-6 ">
-                    <select class="form-control form-control-userselect" id="niveldeusuario" name = {this.props.niveldeusuario}>
+                    <select class="form-control form-control-userselect" id="nivel" name = {this.props.niveldeusuario}>
                         <option value="choice">Nivel de Usuario</option>
                         <option value="admin">Administrador</option>
                         <option value="interno">Usuario Interno</option>
