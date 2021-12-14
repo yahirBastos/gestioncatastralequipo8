@@ -19,7 +19,7 @@ function Eliminarpredios() {
         });
     }
 
-    const delete_estate = id_estate =>{
+    const delete_estate = id_estate => {
         fetch(`http://localhost:3030/api/eliminar_predio/${id_estate}`, {
             method: 'DELETE',
             headers: {
