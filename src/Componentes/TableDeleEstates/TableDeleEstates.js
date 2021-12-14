@@ -1,8 +1,11 @@
 import React from 'react';
-import Boton from '../Boton/Boton'
 
 const TableDeleEstates = (props) => {
-    const { data } = props;
+    const { data, Eliminar } = props;
+
+    const click_delete = (e) => {
+        Eliminar(e.target.id)
+    }
 
     return (
 
@@ -46,7 +49,7 @@ const TableDeleEstates = (props) => {
                             <td>{estate.direccion}</td>
                             <td>{estate.barrio}</td>
                             <td>{estate.estrato}</td>
-                            <td>{<Boton link={"#"} codigo={estate.codigo} texto={"Eliminar"} />}</td>
+                            <td><button id={estate._id}className="btn btn-primary btn-user btn-block" onClick={click_delete}>Eliminar</button></td>
                         </tr>
                     );
                 })}

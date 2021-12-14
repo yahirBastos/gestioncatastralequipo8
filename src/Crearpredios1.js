@@ -5,7 +5,15 @@ import React from "react";
 import Formcrearpredio from "./Componentes/Formcrearpredio/Formcrearpredio";
 class Crearpredios1 extends React.Component {
     datosFormulario = (data) => {
-        console.log('desde el Login: ', data);
+        fetch("http://localhost:3030/api/crear_predio", {
+            method: 'POST',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => window.location.href = "/editarpredios1");
     }
 
     render() {

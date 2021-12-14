@@ -8,15 +8,28 @@ function Eliminarpredios1() {
     const [estatesApi, setEstates] = React.useState([]);
 
     React.useEffect(() => {
-        
+        obtener_estates()
+    }, []);
+
+    const obtener_estates = () =>{
         fetch('http://localhost:3030/api/get_estates')
         .then(response => response.json())
         .then(data => {
             console.log(estatesApi)
             setEstates(data)
         });
+    }
 
-    }, []);
+    const delete_estate = id_estate =>{
+        fetch(`http://localhost:3030/api/eliminar_predio/${id_estate}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => obtener_estates());
+    }
 
     return (
         <><div id="wrapper">
@@ -68,7 +81,7 @@ function Eliminarpredios1() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                <TableDeleEstates data={estatesApi} />
+                                    <TableDeleEstates Eliminar={delete_estate} data={estatesApi}/>
                                 </div>
                             </div>
                         </div>

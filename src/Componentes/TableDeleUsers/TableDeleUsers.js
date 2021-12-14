@@ -1,8 +1,12 @@
 import React from 'react';
-import Boton from '../Boton/Boton'
 
 const TableDeleUsers = (props) => {
-    const { data } = props;
+    const { data, Eliminar } = props;
+
+    const click_deleteuser = (e) => {
+        Eliminar(e.target.id)
+    }
+
     return (
         <table className="table table-bordered" id="tusers" width="100%" cellspacing="0">
             <thead>
@@ -44,7 +48,7 @@ const TableDeleUsers = (props) => {
                             <td>{user.documento}</td>
                             <td>{user.email}</td>
                             <td>{user.contrasena}</td>
-                            <td>{<Boton link={"#"} codigo={user.codigo} texto={"Eliminar"} />}</td>
+                            <td><button id={user._id}className="btn btn-primary btn-user btn-block" onClick={click_deleteuser}>Eliminar</button></td>
                         </tr>
                     );
                 })}

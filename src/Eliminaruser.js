@@ -5,17 +5,30 @@ import TableDeleUsers from "./Componentes/TableDeleUsers";
 
 function Eliminaruser() {
     const [usersApi, setUsers] = React.useState([]);
-
+    
     React.useEffect(() => {
-        
+        obtener_usuarios()
+    }, []);
+
+    const obtener_usuarios = () =>{
         fetch('http://localhost:3030/api/get_users')
         .then(response => response.json())
         .then(data => {
             console.log(usersApi)
             setUsers(data)
         });
+    }
 
-    }, []);
+    const delete_estateuser = id_user =>{
+        fetch(`http://localhost:3030/api/eliminar_usuario/${id_user}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => obtener_usuarios());
+    }
 
     return (
         <><div id="wrapper">
@@ -68,7 +81,7 @@ function Eliminaruser() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    <TableDeleUsers data={usersApi}/>
+                                    <TableDeleUsers Eliminar={delete_estateuser} data={usersApi}/>
                                 </div>
                             </div>
                         </div>
