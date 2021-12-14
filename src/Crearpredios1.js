@@ -28,13 +28,14 @@ class Crearpredios1 extends React.Component {
                 titulo={"Gestiones"}
                 href2={"#"} icon2={"fas fa-tasks"} card2={"Gestionar Pedidos"}
                 card2_1={"Gestionar Pedidos"} href1card2={"/Crearpredios1"} name1card2={"Crear Predios"} href2card2={"/editarpredios1"} name2card2={"Editar Predios"} href3card2= {"/eliminarpredios1"} name3card2={"Eliminar Predios"}
-                href3={"/soliconvenio1"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios de Pagos"}
-                card3_1={"Convenios de Pagos"} href1card3={"aprobconvenios1"} name1card3={"Convenios de Pagos"}
+                href3={"#"} icon3={"fas fa-handshake"} card3={"Solicitar Convenios de Pagos"}
+                card3_1={"Convenios de Pagos"} href1card3={"/aprobconvenios1"} name1card3={"Convenios de Pagos"} href2card3={"#"} href3card3={"#"}
                 titulo2={"Pagos"}
                 href4={"/cobrosinterno"} icon4={"far fa-money-bill-alt"} card4={"Cobros"}
                 href5={"/fechaspagos1"} icon5={"fas fa-calendar-alt"} card5={"Fechas de Pagos y Descuentos"}
                 href6={"/multasinterno"} icon6={"fas fa-dollar-sign"} card6={"Multas"}
                 href7={"/"} icon7={"fas fa-sign-out-alt"} card7={"Cerrar Sesión"}
+                href8={"#"}
                 />
                 {/* <!-- End of Sidebar --> */}
 

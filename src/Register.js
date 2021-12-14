@@ -4,7 +4,15 @@ import React from "react";
 
 class Register extends React.Component {
     datosFormulario = (data) => {
-        console.log('desde el Login: ', data);
+        fetch("http://localhost:3030/api/crear_usuario", {
+            method: 'POST',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
     }
     render(){
         return (
@@ -22,7 +30,7 @@ class Register extends React.Component {
                                     {/* <!-- Nested Row within Card Body --> */}
                                     <div className="row">
                                         <div className="col-lg-6 d-none d-lg-block bg-register-image"></div>
-                                        <Formregistro procDatos={this.datosFormulario} titulo ={"CREAR UNA NUEVA CUENTA"} nombres ={"nombres"} apellidos ={"apellidos"}  correo ={"correo"} telefono ={"telefono"} sexo ={"sexo"} contrasena ={"contrasena"} repcontrasena ={"repcontrasena"} linkregistro ={"/Register"} linkolvido ={"/olvido"} linklogin ={"/Login"} tipodocumento ={"tipodocumento"} numerodocumento = {"numerodocumento"}/>
+                                        <Formregistro procDatos={this.datosFormulario} titulo ={"CREAR UNA NUEVA CUENTA"} nivel={"nivel"} nombres ={"nombre"} apellidos ={"apellido"}  correo ={"email"} telefono ={"telefono"} sexo ={"gender"} contrasena ={"contrasena"} repcontrasena ={"repcontrasena"} linkregistro ={"/Register"} linkolvido ={"/olvido"} linklogin ={"/Login"} tipodocumento ={"tipodocumento"} numerodocumento = {"documento"}/>
                                     </div>
                                 </div>
                             </div>

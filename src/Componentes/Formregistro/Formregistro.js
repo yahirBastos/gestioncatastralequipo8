@@ -6,17 +6,17 @@ class Formregistro extends React.Component {
     enviar = (e) => {
         e.preventDefault();
         const data = {
-            nombres: e.target.nombres.value,
-            apellidos: e.target.apellidos.value,
-            correo: e.target.correo.value,
-            telefono: e.target.telefono.value,
+            nivel: e.target.nivel.value,
+            nombre: e.target.nombre.value,
+            apellido: e.target.apellido.value,
             gender: e.target.gender.value,
+            telefono: e.target.telefono.value,
             tipodocumento: e.target.tipodocumento.value,
-            numerodocumento: e.target.numerodocumento.value,
+            documento: e.target.documento.value,
+            email: e.target.email.value,
             contrasena: e.target.contrasena.value,
             repcontrasena: e.target.repcontrasena.value,
         };
-
         this.props.procDatos(data)
     }
     render() {
@@ -27,37 +27,38 @@ class Formregistro extends React.Component {
                     <div className="text-center">
                         <h1 className="h4 text-gray-900 mb-4">{this.props.titulo}</h1>
                     </div>
-                    <form class="user" onSubmit = {this.enviar}>
+                    <form class="user" onSubmit={this.enviar}>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <input type="text" class="form-control form-control-user" id="nombre"
-                                    placeholder="Nombres" name={this.props.nombres} />
+                                    placeholder="Nombre" name={this.props.nombres} />
                             </div>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control form-control-user" id="apellidos"
-                                    placeholder="Apellidos" name={this.props.apellidos} />
+                                    placeholder="Apellido" name={this.props.apellidos} />
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-user" id="correo"
+                            <input type="email" class="form-control form-control-user" id="email"
                                 placeholder="Correo Electronico" name={this.props.correo} />
                         </div>
                         <div class="form-group row">
-
-                            <div class="col-sm-6 ">
-                                <input type="text" class="form-control form-control-user" id="numerodocumento"
-                                    placeholder="Documento" name={this.props.numerodocumento} />
-
-                                
-                            </div>
-                            <div class="col-sm-6">
+                            
+                        <div class="col-sm-6">
                                 <select class="form-control form-control-userselect" id="tipodocumento" name={this.props.tipodocumento}>
                                     <option value="choice">Tipo de Documento</option>
                                     <option value="cedula">Cédula de Ciudadania</option>
                                     <option value="Cextranjera">Cédula Extanjera</option>
                                     <option value="Otro">Pasaporte</option>
                                 </select>
-                                
+
+                            </div>
+
+                            <div class="col-sm-6 ">
+                                <input type="text" class="form-control form-control-user" id="documento"
+                                    placeholder="Documento" name={this.props.numerodocumento} />
+
+
                             </div>
 
                         </div>
@@ -85,6 +86,11 @@ class Formregistro extends React.Component {
                             <div class="col-sm-6">
                                 <input type="password" class="form-control form-control-user"
                                     id="repcontrasena" placeholder="Repetir Contraseña" name={this.props.repcontrasena} />
+                            </div>
+                            <div className="auto" id="auto" style={{"display": "none"}} >
+                                <select type="hidden" class="form-control form-control-userselect" id="nivel" name={this.props.nivel}>
+                                    <option value="externo">Externo</option>
+                                </select>
                             </div>
                         </div>
                         <button className="btn btn-primary btn-user btn-block">Registrar Cuenta</button>

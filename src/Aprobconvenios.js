@@ -1,6 +1,5 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
-
 import Boton from "./Componentes/Boton";
 import Data from './jsons/convenios.js';
     
