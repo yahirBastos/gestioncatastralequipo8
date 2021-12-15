@@ -29,7 +29,7 @@ class Formcrearpredio extends React.Component {
                 <form onSubmit={this.enviar}>
                     <div class="form-group row">
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-user" id="codigopredio"
+                            <input readonly="readonly" type="text" class="form-control form-control-user" id="codigopredio"
                                 placeholder="Código del Predio" name={this.props.codigopredio} />
                         </div>
 

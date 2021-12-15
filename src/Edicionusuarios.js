@@ -7,6 +7,7 @@ class Edicionusuarios extends React.Component {
     datosFormulario = (data) => {
         console.log('desde el Login: ', data);
     }
+    
     render() {
         return (
             <div id="wrapper">
@@ -45,7 +46,9 @@ class Edicionusuarios extends React.Component {
 
                         {/* <!-- Begin Form Page --> */}
                         <Formcrearcuenta procDatos={this.datosFormulario} titulo={"Editar Usuarios"} codigodeusuario={"codigodeusuario"} Niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"}
-                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"} />
+                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"} 
+                            value_id={""} value_nombre={""} value_apellido={""} value_gender={""} value_telefono={""} value_tipodoc={""} value_documento={""}
+                            value_email={""} value_contrasena={""} value_repcontrasena={""}/>
                     </div>
                 </div>
             </div>
