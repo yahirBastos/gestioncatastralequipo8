@@ -7,7 +7,7 @@ class Edicionusuarios extends React.Component {
     datosFormulario = (data) => {
         console.log('desde el Login: ', data);
     }
-    
+
     render() {
         return (
             <div id="wrapper">
