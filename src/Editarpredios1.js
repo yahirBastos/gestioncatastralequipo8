@@ -2,8 +2,10 @@ import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import React from "react";
 import TableEditEstates from "./Componentes/TablaEditarPredios/";
+import { Link, useNavigate } from "react-router-dom";
 
 function Editarpredios1() {
+    const navegacion = useNavigate();
 
     const [estatesApi, setEstates] = React.useState([]);
 
@@ -17,6 +19,10 @@ function Editarpredios1() {
         });
 
     }, []);
+
+    const editar_predios = (id_estates) =>{
+        navegacion(`/edicionpredios1/${id_estates}`);
+    }
 
     return (
         <><div id="wrapper">
@@ -69,7 +75,7 @@ function Editarpredios1() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                    <TableEditEstates data={estatesApi} link={"/Edicionpredios1"}/>
+                                    <TableEditEstates data={estatesApi} Editar={editar_predios}/>
                                 </div>  
                             </div>
                         </div>

@@ -35,6 +35,7 @@ import Gmultasinterno from './Gestionmultasinterno';
 import Fechaspagoexterno from './Fechaspagoexterno';
 import Fechaspagos from './Fechaspago';
 import Fechaspagos1 from './Fechaspagos1';
+import Edicionpredios1 from './Edicionpredios1';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -57,6 +58,7 @@ ReactDOM.render(
        path="/edicionusuarios/:id_user" 
        element={<Edicionusuarios/>}
        />
+       <Route path="/edicionpredios1/:id_estate" element={<Edicionpredios1/>}/>
        <Route path="/gestionaru" element={<Gestionaru/>}/>
        <Route path="/eliminaruser" element={<Eliminaruser/>}/>
        <Route path="/editarpredios" element={<Editarpredios/>}/>

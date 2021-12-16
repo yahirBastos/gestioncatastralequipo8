@@ -2,9 +2,10 @@ import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
 import React, { useEffect } from "react";
 import Formcrearpredio from "./Componentes/Formcrearpredio/";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
-function Edicionpredios() {
+function Edicionpredios1() {
+    const navegacion = useNavigate()
 
     let params = useParams()
 
@@ -41,7 +42,15 @@ function Edicionpredios() {
     });
 
     const datosFormulario = (data) => {
-        console.log('desde el Login: ', data);
+        fetch(`http://localhost:3030/api/editar_predio/${params.id_estate}`, {
+            method: 'PUT',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => navegacion("/editarpredios1"));
     }
 
     return (
@@ -105,4 +114,4 @@ function Edicionpredios() {
         </div></>
     );
 }
-export default Edicionpredios;
+export default Edicionpredios1;
