@@ -1,2 +1,2 @@
-import Formcrearpredio from "./Formcrearpredio";
-export default Formcrearpredio
+import Formcrearcuenta from "./Formcrearcuenta";
+export default Formcrearcuenta

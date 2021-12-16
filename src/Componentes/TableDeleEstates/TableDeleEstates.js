@@ -14,6 +14,7 @@ const TableDeleEstates = (props) => {
                 <tr>
                     <th>Codigo predio</th>
                     <th>Nombre del propietario</th>
+                    <th>Tipo Documento</th>    
                     <th>Documento</th>
                     <th>Area</th>
                     <th>Area Construida</th>
@@ -27,6 +28,7 @@ const TableDeleEstates = (props) => {
                 <tr>
                     <th>Codigo predio</th>
                     <th>Nombre del propietario</th>
+                    <th>Tipo Documento</th>    
                     <th>Documento</th>
                     <th>Area</th>
                     <th>Area Construida</th>
@@ -43,6 +45,7 @@ const TableDeleEstates = (props) => {
                         <tr key={estate._id}>
                             <td>{estate._id}</td>
                             <td>{estate.nombre}</td>
+                            <td>{estate.tipodocumento}</td>
                             <td>{estate.documento}</td>
                             <td>{estate.area}</td>
                             <td>{estate.areac}</td>

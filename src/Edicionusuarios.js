@@ -1,14 +1,49 @@
 import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import Formcrearcuenta from "./Componentes/Formcrearcuenta/Formcrearcuenta";
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-class Edicionusuarios extends React.Component {
-    datosFormulario = (data) => {
+function Edicionusuarios(){
+
+    let params = useParams()
+
+    let input_id = React.createRef()
+    let input_nivel = React.createRef()
+    let input_nombre = React.createRef()  
+    let input_apellido = React.createRef()
+    let input_gender = React.createRef()
+    let input_telefono = React.createRef()
+    let input_tipodocumento = React.createRef()
+    let input_documento = React.createRef()
+    let input_email = React.createRef()
+
+  
+    useEffect(() => {
+        fetch(`http://localhost:3030/api/get_user_by_id/${params.id_user}`, {
+            method: "GET",
+            headers: {
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              input_id.current.value = data._id
+              input_nombre.current.value = data.nombre
+              input_nivel.current.value = data.nivel  
+              input_apellido.current.value = data.apellido  
+              input_gender.current.value = data.gender  
+              input_telefono.current.value = data.telefono  
+              input_tipodocumento.current.value = data.tipodocumento 
+              input_documento.current.value = data.documento  
+              input_email.current.value = data.email  
+              
+              //console.log();
+            });
+    });
+
+    const datosFormulario = (data) => {
         console.log('desde el Login: ', data);
     }
-
-    render() {
         return (
             <div id="wrapper">
 
@@ -45,15 +80,21 @@ class Edicionusuarios extends React.Component {
                         {/* <!-- End of Topbar --> */}
 
                         {/* <!-- Begin Form Page --> */}
-                        <Formcrearcuenta procDatos={this.datosFormulario} titulo={"Editar Usuarios"} codigodeusuario={"codigodeusuario"} Niveldeusuario={"Niveldeusuario"} nombres={"nombres"} apellidos={"apellidos"} gender={"gender"}
-                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"} 
-                            value_id={""} value_nombre={""} value_apellido={""} value_gender={""} value_telefono={""} value_tipodoc={""} value_documento={""}
-                            value_email={""} value_contrasena={""} value_repcontrasena={""}/>
+                        <Formcrearcuenta procDatos={datosFormulario} Editar={""} titulo={"Editar Usuarios"} codigodeusuario={"codigodeusuario"} Niveldeusuario={"nivel"} nombres={"nombre"} apellidos={"apellidos"} gender={"gender"}
+                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"}
+                            value_id={input_id} 
+                            value_nivel={input_nivel}
+                            value_nombre={input_nombre} 
+                            value_apellido={input_apellido} 
+                            value_gender={input_gender} 
+                            value_telefono={input_telefono} 
+                            value_tipodoc={input_tipodocumento} 
+                            value_documento={input_documento}
+                            value_email={input_email}/>
                     </div>
                 </div>
             </div>
         );
-    }
 }
 
 export default Edicionusuarios;

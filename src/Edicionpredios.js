@@ -1,15 +1,58 @@
 import Sidebar from "./Componentes/Sidebar";
 import Navbar from "./Componentes/Navbar";
-import React from "react";
+import React, { useEffect } from "react";
 import Formcrearpredio from "./Componentes/Formcrearpredio/Formcrearpredio";
+import { useParams, useNavigate } from "react-router-dom";
 
-class Edicionpredios extends React.Component {
+function Edicionpredios(){
+    const navegacion = useNavigate()
 
-    datosFormulario = (data) => {
-        console.log('desde el Login: ', data);
+    let params = useParams()
+    
+    let input_id = React.createRef()
+    let input_nombre = React.createRef()  
+    let input_tipodocumento = React.createRef()
+    let input_documento = React.createRef()
+    let input_area = React.createRef()
+    let input_areac= React.createRef()
+    let input_direccion = React.createRef()
+    let input_barrio = React.createRef()
+    let input_estrato = React.createRef()
+
+    useEffect(() => {
+        fetch(`http://localhost:3030/api/get_estate_by_id/${params.id_estate}`, {
+            method: "GET",
+            headers: {
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              input_id.current.value = data._id
+              input_nombre.current.value = data.nombre 
+              input_tipodocumento.current.value = data.tipodocumento 
+              input_documento.current.value = data.documento 
+              input_area.current.value = data.area  
+              input_areac.current.value = data.areac 
+              input_direccion.current.value = data.direccion  
+              input_barrio.current.value = data.barrio  
+              input_estrato.current.value = data.estrato 
+
+              //console.log();
+            });
+    });
+
+    const datosFormulario = (data, id_estate) => {
+        fetch(`http://localhost:3030/api/editar_predio/${params.id_estate}`, {
+            method: 'POST',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => navegacion("/editarpredios"));
     }
 
-    render() {
         return (
             <><div id="wrapper">
 
@@ -50,9 +93,18 @@ class Edicionpredios extends React.Component {
                         <div className="container-fluid">
 
                             {/* <!-- Page Heading --> */}
-                            <Formcrearpredio procDatos={this.datosFormulario} titulo={"Editar Predios"} codigopredio={"codigopredio"} nombre={"nombre"} tipodocumento={"tipodocumento"}
+                            <Formcrearpredio procDatos={datosFormulario} titulo={"Editar Predios"} codigopredio={"codigopredio"} nombre={"nombre"} tipodocumento={"tipodocumento"}
                                 numerodocumento={"numerodocumento"} areatotal={"areatotal"} areaconstruida={"areaconstruida"} direccion={"direccion"}
                                 barrio={"barrio"} estrato={"estrato"} linkregistropredio={"#"} nombreboton={"Editar Predio"}
+                                value_id={input_id}
+                                value_nombre={input_nombre}
+                                value_tipodocumento={input_tipodocumento}
+                                value_documento={input_documento}
+                                value_area={input_area}
+                                value_areac={input_areac}
+                                value_direccion={input_direccion}
+                                value_barrio={input_barrio}
+                                value_estrato={input_estrato}
                             />
 
                         </div>
@@ -60,6 +112,5 @@ class Edicionpredios extends React.Component {
                 </div>
             </div></>
         );
-    }
 }
 export default Edicionpredios;

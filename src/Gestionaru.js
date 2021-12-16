@@ -2,10 +2,13 @@ import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import React from "react";
 import TableUsers from "./Componentes/TableUsers";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Gestionaru() {
     const [usersApi, setUsers] = React.useState([]);
+
+    const navegacion = useNavigate();
 
     React.useEffect(() => {
         
@@ -17,6 +20,12 @@ function Gestionaru() {
         });
 
     }, []);
+
+    const editar_usuario = (id_user) =>{
+        navegacion(`/edicionusuarios/${id_user}`);
+    }
+
+    
     
     return (
         <><div id="wrapper">
@@ -69,7 +78,7 @@ function Gestionaru() {
                             </div>
                             <div className="card-body">
                                 <div className="table-responsive">
-                                <TableUsers data={usersApi}/>
+                                <TableUsers Editar={editar_usuario} data={usersApi}/>
                                 </div>
                             </div>
                         </div>

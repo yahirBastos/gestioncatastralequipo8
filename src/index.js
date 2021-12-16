@@ -52,8 +52,11 @@ ReactDOM.render(
        <Route path="/crearcuenta" element={<Crearcuenta/>}/>
        <Route path="/externo" element={<Dashboardexterno/>}/>
        <Route path="/asociarpredios" element={<Asociarpredios/>}/>
-       <Route path="/edicionpredios" element={<Edicionpredios/>}/>   
-       <Route path="/edicionusuarios" element={<Edicionusuarios/>}/>
+       <Route path="/edicionpredios/:id_estate" element={<Edicionpredios/>}/>   
+       <Route 
+       path="/edicionusuarios/:id_user" 
+       element={<Edicionusuarios/>}
+       />
        <Route path="/gestionaru" element={<Gestionaru/>}/>
        <Route path="/eliminaruser" element={<Eliminaruser/>}/>
        <Route path="/editarpredios" element={<Editarpredios/>}/>
