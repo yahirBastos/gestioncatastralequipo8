@@ -57,7 +57,7 @@ function Edicionusuarios(){
             <div id="wrapper">
 
                 <Sidebar
-                    href0={"/Dashboard"} primephoto={"assets/Logogcm.png"}
+                    href0={"/Dashboard"} primephoto={"https://4asesion2-test.s3.us-west-002.backblazeb2.com/Logogcm.png"}
                     href1={"/Dashboard"} icon1={"fas fa-house-user"} card1={"Dashboard"}
                     titulo={"Gestiones"}
                     href2={"#"} icon2={"fas fa-tasks"} card2={"Gestionar Pedidos"}

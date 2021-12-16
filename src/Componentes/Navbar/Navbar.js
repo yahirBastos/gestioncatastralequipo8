@@ -147,8 +147,7 @@ class Navbar extends React.Component {
                     <Link to={"/Dashboard"} className="nav-link dropdown-toggle" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small">{this.props.nombredueño}</span>
-                        <img className="img-profile rounded-circle"
-                            src="assets/img/undraw_profile.svg" alt="foto"/>
+                        <i className="fas fa-user-tie"></i>
                     </Link>
                 </li>
 
