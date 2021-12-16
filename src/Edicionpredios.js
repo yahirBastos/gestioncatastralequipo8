@@ -43,7 +43,7 @@ function Edicionpredios(){
 
     const datosFormulario = (data, id_estate) => {
         fetch(`http://localhost:3030/api/editar_predio/${params.id_estate}`, {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(data), // data can be `string` or {object}!
             headers: {
                 'Content-Type': 'application/json'

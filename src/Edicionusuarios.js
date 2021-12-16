@@ -2,9 +2,10 @@ import Sidebar from "./Componentes/Sidebar/";
 import Navbar from "./Componentes/Navbar";
 import Formcrearcuenta from "./Componentes/Formcrearcuenta/Formcrearcuenta";
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function Edicionusuarios(){
+    const navegacion = useNavigate()
 
     let params = useParams()
 
@@ -42,7 +43,15 @@ function Edicionusuarios(){
     });
 
     const datosFormulario = (data) => {
-        console.log('desde el Login: ', data);
+        fetch(`http://localhost:3030/api/editar_usuario/${params.id_user}`, {
+            method: 'PUT',
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(response => navegacion("/gestionaru"));
     }
         return (
             <div id="wrapper">
@@ -80,8 +89,8 @@ function Edicionusuarios(){
                         {/* <!-- End of Topbar --> */}
 
                         {/* <!-- Begin Form Page --> */}
-                        <Formcrearcuenta procDatos={datosFormulario} Editar={""} titulo={"Editar Usuarios"} codigodeusuario={"codigodeusuario"} Niveldeusuario={"nivel"} nombres={"nombre"} apellidos={"apellidos"} gender={"gender"}
-                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"numerodocumento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"}
+                        <Formcrearcuenta procDatos={datosFormulario} Editar={""} titulo={"Editar Usuarios"} codigodeusuario={"codigodeusuario"} Niveldeusuario={"nivel"} nombres={"nombre"} apellidos={"apellido"} gender={"gender"}
+                            Telefono={"Telefono"} tipodocumento={"tipodocumento"} numerodocumento={"documento"} email={"email"} contraseña={"contraseña"} repcontraseña={"repcontraseña"} linkregistropredio={"#"} nombreboton={"Editar Usuario"}
                             value_id={input_id} 
                             value_nivel={input_nivel}
                             value_nombre={input_nombre} 
