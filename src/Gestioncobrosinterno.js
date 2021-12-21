@@ -48,9 +48,9 @@ function Gcobrosinterno() {
                         </div>
 
                         {/* <!-- Content Row --> */}
-                        <Alertas href={""}bold={"¡Tenga Cuidado "} texto={"al hacer clic en este botón va a generar una multa alos dueños de predios."} boton={"Enviar Multas"} 
+                        <Alertas href={""}bold={"¡Tenga Cuidado "} texto={"al hacer clic en este botón va a generar un cobro a los dueños de predios."} boton={"Enviar Cobros"} 
                         titulo={"ALERTA"} cuerpo={"Realmente desea enviar multa?"} boton1={"NO"} href1={"/Interno"} boton2={"SI"}
-                        titulo2={"¡MULTA GENERADA!"} cuerpo2={"Multa enviada exitosamente"} href2={"/Interno"} boton3={"Cerrar"}/>
+                        titulo2={"¡COBRO GENERADO!"} cuerpo2={"Cobro enviado exitosamente"} href2={"/Interno"} boton3={"Cerrar"}/>
                     </div>
                 </div>
             </div>
